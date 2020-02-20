@@ -1,24 +1,13 @@
+<%-- 
+    Document   : AddSemesterOfStudy
+    Created on : Feb 20, 2020, 11:48:59 AM
+    Author     : Keboi
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
-<!--    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <form action="AddSemesterOfStudy" method="post">
-            SemesterID:<input type="number" name="semesterID"><br>
-            SemesterName:<input type="text" name="semester_name"><br>
-            <input type="Submit" value="ADD SEMESTER">
-        </form>
-    </body>
-</html>-->
-<head>
+    <<head>
   <title></title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -40,9 +29,9 @@ and open the template in the editor.
       </div>
     </div>
     <div class="form-group">
-      <label class="control-label col-sm-2" for="semestername">SemesterName:</label>
+      <label class="control-label col-sm-2" for="semester_name">SemesterName:</label>
       <div class="col-sm-10">          
-        <select class="form-control" id="category" placeholder="Select Semester" name="semestername">
+        <select class="form-control" id="semester_name" placeholder="Select Semester" name="semester_name">
       	<option>Semester One</option>
       	<option>Semester Two</option>
       	<option>Semester Three</option>
@@ -59,4 +48,5 @@ and open the template in the editor.
 
 </body>
 </html>
+
 

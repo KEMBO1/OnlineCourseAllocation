@@ -40,6 +40,8 @@ public class DAOcontroller {
                 + "'"+lec.getDepartment()+"', "
                 + "'"+lec.getSalutation()+"', '"+lec.getPassword()+"')";
         
+        System.out.println(query);
+        
         Database db =new Database();
         PreparedStatement statemnt=db.getPreparedStatement(query);
         return db.insertToDB(statemnt);

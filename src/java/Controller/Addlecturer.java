@@ -36,6 +36,9 @@ public class Addlecturer extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         String FirstName=request.getParameter("first_name");
         String SecondName=request.getParameter("second_name");
+        
+//        PrintWriter out= response.getWriter();
+//        out.print(SecondName);
         String Category=request.getParameter("category");
         String Department=request.getParameter("department");
         String Salutation=request.getParameter("salutation");

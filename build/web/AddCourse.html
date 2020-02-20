@@ -6,15 +6,16 @@ and open the template in the editor.
 -->
 <html>
 <!--    <head>
-        <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <form action="AddYearOfStudy" method="post">
-            YearID:<input type="number" name="yearID"><br>
-            YearName:<input type="text" name="year_name"><br>
-            <input type="Submit" value="ADD YEAR">
+        <div>TODO write content</div>
+         <form action="AddCourse" method="post">
+        CourseName:<input type="text" name="course_name"><br>
+        UnitCode:<input type="text" name="unit_code"><br>
+        <input type="submit"  value="submit">
+        
         </form>
     </body>
 </html>-->
@@ -31,24 +32,18 @@ and open the template in the editor.
 <body><br><br><br>
 
 <div class="container">
-    <form action="AddYearOfStudy" method="post">
+    <form action="AddCourse" method="post">
   <form class="form-horizontal" action="" method="post">
     <div class="form-group">
-      <label class="control-label col-sm-2" for="yearID">YearID:</label>
+      <label class="control-label col-sm-2" for="course_name">CourseName:</label>
       <div class="col-sm-10">
-        <input type="number" class="form-control" id="yearID" placeholder="Enter yearID" name="yearID">
+        <input type="text" class="form-control" id="yearID" placeholder="Enter course_name" name="course_name">
       </div>
     </div>
     <div class="form-group">
-      <label class="control-label col-sm-2" for="yearname">YearName:</label>
+      <label class="control-label col-sm-2" for="unit_code">UnitCode:</label>
       <div class="col-sm-10">          
-        <select class="form-control" id="category" placeholder="Select yearname" name="year_name">
-      	<option>Year One</option>
-      	<option>Year Two</option>
-      	<option>Year Three</option>
-        <option>Year Four</option>
-        <option>Year Five</option>
-      </select>
+      <input type="text" class="form-control" id="unit_code" placeholder="Enter unit_code" name="unit_code">
   </div>
 </div>
     <div class="form-group">        
@@ -61,3 +56,4 @@ and open the template in the editor.
 
 </body>
 </html>
+
