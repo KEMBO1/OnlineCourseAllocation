@@ -9,10 +9,17 @@ import Kemboi.CourseAllocation;
 import Kemboi.Courses;
 import Kemboi.Department;
 import Kemboi.Lecturer;
+import Kemboi.Login;
 import Kemboi.SemesterOfStudy;
 import Kemboi.YearOfStudy;
 import database.Database;
+import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import org.apache.tomcat.jni.User;
 
 /**
  *
@@ -33,9 +40,9 @@ public class DAOcontroller {
     }
     public boolean addLecturer(Lecturer lec){
         String query="INSERT INTO `onlinecourse-allocation`.`lecturer`"
-                + " (`FirstName`, `SecondName`, `Category`, `Department`, "
+                + " (`FirstName`, `SecondName`,`user_name`, `Category`, `Department`, "
                 + "`Salutation`, `Password`"
-                + ") VALUES ('"+lec.getFirstName()+"', '"+lec.getSecondName()+"',"
+                + ") VALUES ('"+lec.getFirstName()+"', '"+lec.getSecondName()+"','"+lec.getUsername()+"',"
                 + " '"+lec.getCategory()+"', "
                 + "'"+lec.getDepartment()+"', "
                 + "'"+lec.getSalutation()+"', '"+lec.getPassword()+"')";
@@ -89,4 +96,54 @@ public class DAOcontroller {
         PreparedStatement statemnt=db.getPreparedStatement(query);
         return db.insertToDB(statemnt);
     }
+    
+        public  boolean login(String username, String password, String table){
+//            String query="select from `onlinecourse-allocation`.`lecturer` where LecturerID='"+login.getUsername()+"' and Password= '"+login.getPassword()+"'";
+//            System.out.println(query);
+//             Boolean answer=false;       
+//            Database db=new Database();
+//            PreparedStatement statemnt=db.getPreparedStatement(query);
+//            
+//            
+//        try {
+//            ResultSet resultSet=statemnt.executeQuery();
+//            if(resultSet.next()){
+//               answer=true;
+//                
+//            }
+//        } catch (SQLException ex) {
+//            
+//             answer=false;
+//            Logger.getLogger(DAOcontroller.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+//        
+//        return answer;
+//        }
+    PreparedStatement pst = null;
+    ResultSet rs = null;
+            Connection con = null;
+            
+            String query = "select * from "+table+" where user_name = ? and Password = ?";
+            
+            Database db=new Database();
+            
+          con = db.getConnection();
+          
+            try {
+                pst = con.prepareStatement(query);
+                pst.setString(1, username);
+                pst.setString(2, password);
+                
+                rs = pst.executeQuery();
+                
+                if(rs.next()){
+                    return true;
+                }else
+                    return false;
+            } catch (Exception e) {
+            }
+      return true;
+
+        
+        }
 }

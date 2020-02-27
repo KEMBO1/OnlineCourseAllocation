@@ -11,22 +11,40 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+         <style>
+.table{
+  width: 60%;
+  margin-right: 20%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+</style>
+
     </head>
     <body>
         <%    
           ArrayList<Lecturer> lecturers =(ArrayList<Lecturer>)session.getAttribute("lecturer");
           System.out.println(lecturers.size());
         %>
-        <table <table class="table table-sm table-bordered" id="myTable">
+         <table class="table table-sm table-bordered" id="myTable">
                 <thead>
                     <tr>
-                        <td>FirstName</td>
-                        <td>SecondName</td>
-                        <td>Category</td>
-                        <td>Department</td>
-                        <td>Salutation</td>
-                        <td>Password</td>
+                        <th>FirstName</th>
+                        <th>SecondName</th>
+                        <th>Category</th>
+                        <th>Department</th>
+                        <th>Salutation</th>
+                        <!--<th>Password</th>-->
                         <!--<td>LecturerID</td>-->
                         
                     </tr>
@@ -40,12 +58,18 @@
                         <td><%= l.getCategory()%></td>
                         <td><%= l.getDepartment()%></td>
                         <td><%= l.getSalutation()%></td>
-                        <td><%= l.getPassword()%></td>
+                        <!--<td><%= l.getPassword()%></td>-->
                         <!--<td><%= l.getLecturerID()%></td>-->
                     </tr>
                     <%} %>
                 </tbody>
             </table>
+        <script>
+            $(document).ready(function () {
+$('#myTable').DataTable();
+$('.dataTables_length').addClass('bs-select');
+});
+            </script>
         
     </body>
 </html>

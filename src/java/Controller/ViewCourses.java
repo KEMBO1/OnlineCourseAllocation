@@ -43,7 +43,7 @@ public class ViewCourses extends HttpServlet {
         
         session.setAttribute("courses",courseses);
          
-        RequestDispatcher dispatcher=getServletContext().getRequestDispatcher("/ViewCourses.jsp");
+        RequestDispatcher dispatcher=getServletContext().getRequestDispatcher("/Courses.jsp");
         
         dispatcher.forward(request, response);
     }

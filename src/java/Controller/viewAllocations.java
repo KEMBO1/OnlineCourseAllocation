@@ -37,6 +37,11 @@ public class viewAllocations extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        HttpSession sess = request.getSession();
+        String name = (String)sess.getAttribute("username");
+        PrintWriter out = response.getWriter();
+        //out.print(name);
+        
         HttpSession session=request.getSession();
         
         Retrive retrive=new Retrive();
@@ -44,7 +49,7 @@ public class viewAllocations extends HttpServlet {
         
         session.setAttribute("Alloctions", courseAllocations);
         
-        RequestDispatcher dispatcher= getServletContext().getRequestDispatcher("/ViewAllocation.jsp");
+        RequestDispatcher dispatcher= getServletContext().getRequestDispatcher("/Allocations.jsp");
         
         dispatcher.forward(request, response);
     }

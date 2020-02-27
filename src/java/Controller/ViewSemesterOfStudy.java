@@ -43,7 +43,7 @@ public class ViewSemesterOfStudy extends HttpServlet {
         
         session.setAttribute("semesterOfStudy", semesterOfStudys);
         
-        RequestDispatcher dispatcher=getServletContext().getRequestDispatcher("/ViewSemesterOfStudy.jsp");
+        RequestDispatcher dispatcher=getServletContext().getRequestDispatcher("/Semesterofstudy.jsp");
         
         dispatcher.forward(request, response);
     }

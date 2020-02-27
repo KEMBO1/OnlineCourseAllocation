@@ -9,6 +9,7 @@ import Kemboi.CourseAllocation;
 import Kemboi.Courses;
 import Kemboi.Department;
 import Kemboi.Lecturer;
+import Kemboi.Login;
 import Kemboi.SemesterOfStudy;
 import Kemboi.YearOfStudy;
 import database.Database;
@@ -103,7 +104,7 @@ public class Retrive {
                Lecturer lecturer=new Lecturer(resultSet.getString(1), 
                        resultSet.getString(2), resultSet.getString(3), 
                        resultSet.getString(4), resultSet.getString(5), 
-                       resultSet.getString(6), resultSet.getString(7));
+                       resultSet.getString(6), resultSet.getString(7),resultSet.getString(8));
                lecturers.add(lecturer);
            }
        } catch (SQLException ex) {
@@ -155,7 +156,24 @@ public class Retrive {
         return ofStudys;
        }   
    
-    
+//    public ArrayList<Login> ViewLogins(){
+//        ArrayList<Login> logins=new ArrayList<>();
+//        
+//        try {
+//            String query="SELECT * FROM 'login'";
+//            Database db=new Database();
+//            PreparedStatement statemnt=db.getPreparedStatement(query);
+//            
+//            ResultSet resultSet=db.retrieveInfo(statemnt);
+//            
+//            while(resultSet.next()){
+//                Login login=new Login(resultSet.getString(1), resultSet.getString(2));
+//                login.add(login);
+//            }
+//        } catch (Exception e) {
+//        }
+//        
+//    }
    
   }
   

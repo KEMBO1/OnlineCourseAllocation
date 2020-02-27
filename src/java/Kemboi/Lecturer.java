@@ -17,8 +17,9 @@ public class Lecturer {
     private String Salutation;
     private String Password;
     private String LecturerID;
+    private String username;
 
-    public Lecturer(String FirstName, String SecondName, String Category, String Department, String Salutation, String Password, String LecturerID) {
+    public Lecturer(String FirstName, String SecondName, String Category, String Department, String Salutation, String Password, String LecturerID, String username) {
         this.FirstName = FirstName;
         this.SecondName = SecondName;
         this.Category = Category;
@@ -26,6 +27,7 @@ public class Lecturer {
         this.Salutation = Salutation;
         this.Password = Password;
         this.LecturerID = LecturerID;
+        this.username = username;
     }
 
     public String getFirstName() {
@@ -83,5 +85,15 @@ public class Lecturer {
     public void setLecturerID(String LecturerID) {
         this.LecturerID = LecturerID;
     }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    
 }
     

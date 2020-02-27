@@ -12,17 +12,16 @@
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/Users/Keboi/Documents/NetBeansProjects/OnlineCourseAllocationDB/src/java/Controller/viewAllocations.java</file>
             <file>file:/C:/Users/Keboi/Documents/NetBeansProjects/OnlineCourseAllocationDB/web/AddLecturer.jsp</file>
-            <file>file:/C:/Users/Keboi/Documents/NetBeansProjects/OnlineCourseAllocationDB/web/AddSemesterOfStudy.jsp</file>
-            <file>file:/C:/Users/Keboi/Documents/NetBeansProjects/OnlineCourseAllocationDB/src/java/Controller/AddSemesterOfStudy.java</file>
+            <file>file:/C:/Users/Keboi/Documents/NetBeansProjects/OnlineCourseAllocationDB/src/java/Controller/login.java</file>
             <file>file:/C:/Users/Keboi/Documents/NetBeansProjects/OnlineCourseAllocationDB/web/index.jsp</file>
-            <file>file:/C:/Users/Keboi/Documents/NetBeansProjects/OnlineCourseAllocationDB/web/META-INF/context.xml</file>
-            <file>file:/C:/Users/Keboi/Documents/NetBeansProjects/OnlineCourseAllocationDB/web/AddCourse.html</file>
             <file>file:/C:/Users/Keboi/Documents/NetBeansProjects/OnlineCourseAllocationDB/src/java/Controller/Addlecturer.java</file>
-            <file>file:/C:/Users/Keboi/Documents/NetBeansProjects/OnlineCourseAllocationDB/web/index.html</file>
+            <file>file:/C:/Users/Keboi/Documents/NetBeansProjects/OnlineCourseAllocationDB/web/index_1.jsp</file>
+            <file>file:/C:/Users/Keboi/Documents/NetBeansProjects/OnlineCourseAllocationDB/web/LOGIN.jsp</file>
+            <file>file:/C:/Users/Keboi/Documents/NetBeansProjects/OnlineCourseAllocationDB/src/java/database/controller/Retrive.java</file>
             <file>file:/C:/Users/Keboi/Documents/NetBeansProjects/OnlineCourseAllocationDB/src/java/database/controller/DAOcontroller.java</file>
-            <file>file:/C:/Users/Keboi/Documents/NetBeansProjects/OnlineCourseAllocationDB/web/AddSemesterOfStudy.html</file>
-            <file>file:/C:/Users/Keboi/Documents/NetBeansProjects/OnlineCourseAllocationDB/web/style.css</file>
+            <file>file:/C:/Users/Keboi/Documents/NetBeansProjects/OnlineCourseAllocationDB/src/java/Kemboi/Lecturer.java</file>
         </group>
     </open-files>
 </project-private>

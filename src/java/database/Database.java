@@ -30,7 +30,7 @@ public class Database {
     }
         
 
-	private   Connection getConnection() {
+	public   Connection getConnection() {
 
 		try {
 			Class.forName(DRIVERCLASS);

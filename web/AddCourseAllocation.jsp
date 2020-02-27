@@ -21,6 +21,11 @@ and open the template in the editor.
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="MDB/css/addons/datatables.min.css">
+        <link rel="stylesheet" href="MDB/css/modules/bootstrap.css">
+        <link rel="stylesheet" href="MDB/css/modules/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="MDB/css/modules/style.css"
+        
     </head>
     <body>
         
@@ -43,7 +48,7 @@ and open the template in the editor.
                       <%= lecturer.getSalutation()+"  "+lecturer.getFirstName()+" "+lecturer.getSecondName() %>
                    </option>
                 <% }  %>
-            </select><br>
+            </select><br><br>
             Courses:
             <!--<input type="text" name="courseID"><br>-->
             
@@ -53,7 +58,7 @@ and open the template in the editor.
                       <%= courses.getCourseName() %>
                    </option>
                 <% }  %>
-            </select><br>
+            </select><br><br>
             Departments:
             <!--<input type="number" name="departmentID"><br>-->
             
@@ -63,7 +68,7 @@ and open the template in the editor.
                       <%= department.getDepartmentName()%>
                    </option>
                 <% }  %>
-            </select><br>
+            </select><br><br>
             Semester:
             <!--<input type="number" name="semesterID" min="1" max="3"><br>!-->
             
@@ -73,7 +78,7 @@ and open the template in the editor.
                       <%= semesterOfStudy.getSemesterName()%>
                    </option>
                 <% }  %>
-            </select><br>
+            </select><br><br>
             
             Year:
             <!--<input type="number" name="yearID"><br>!-->
@@ -84,7 +89,7 @@ and open the template in the editor.
                       <%= yearOfStudy.getYearName()%>
                    </option>
                 <% }  %>
-            </select><br>
+            </select><br><br>
             
             
            Year_Generated:

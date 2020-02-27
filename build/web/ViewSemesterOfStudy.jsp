@@ -11,7 +11,27 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <title>JSP Page</title>
+         <style>
+.table{
+  width: 60%;
+  margin-right: 20%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+</style>
+
     </head>
     <body>
         <%    
@@ -21,8 +41,8 @@
         <table <table class="table table-sm table-bordered" id="myTable">
                 <thead>
                     <tr>
-                        <td>SemesterID</td>
-                        <td>SemesterName</td>
+                        <th>SemesterID</th>
+                        <th>SemesterName</th>
                     </tr>
                         
                 </thead>

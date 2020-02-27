@@ -43,7 +43,7 @@ public class ViewDepartment extends HttpServlet {
         
         session.setAttribute("department", departments);
         
-        RequestDispatcher dispatcher=getServletContext().getRequestDispatcher("/ViewDepartment.jsp");
+        RequestDispatcher dispatcher=getServletContext().getRequestDispatcher("/Depatment.jsp");
         
         dispatcher.forward(request, response);
     }

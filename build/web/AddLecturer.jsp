@@ -23,28 +23,34 @@
     <div class="form-group">
       <label class="control-label col-sm-2" for="first_name">FirstName:</label>
       <div class="col-sm-10">
-        <input type="text" class="form-control" id="first_name" placeholder="Enter firstname" name="first_name">
+          <input type="text" class="form-control" id="first_name" placeholder="Enter firstname" name="first_name"><br>
       </div>
     </div>
     <div class="form-group">
       <label class="control-label col-sm-2" for="second_name">SecondName:</label>
       <div class="col-sm-10">          
-        <input type="text" class="form-control" id="second_name" placeholder="Enter secondname" name="second_name">
+          <input type="text" class="form-control" id="second_name" placeholder="Enter secondname" name="second_name"><br>
+      </div>
+    </div>
+      <div class="form-group">
+      <label class="control-label col-sm-2" for="second_name">Username</label>
+      <div class="col-sm-10">          
+          <input type="text" class="form-control" id="second_name" placeholder="" name="username"><br>
       </div>
     </div>
     <div class="form-group">
       <label class="control-label col-sm-2" for="category">Category:</label>
       <div class="col-sm-10">          
-        <select class="form-control" id="category" placeholder="Select category" name="category">
+        <select class="form-control" id="category" placeholder="Select category" name="category"><br>
       	<option>Hod</option>
       	<option>Lecturer</option>
-      </select>
+      </select><br>
       </div>
     </div>
     <div class="form-group">
       <label class="control-label col-sm-2" for="department">Department:</label>
       <div class="col-sm-10">          
-        <input type="text>" class="form-control" id="department" placeholder="Enter department"name="department">
+        <input type="text>" class="form-control" id="department" placeholder="Enter department"name="department"><br>
       </div>
     </div>
     <div class="form-group">
@@ -54,13 +60,13 @@
       	<option>Mr</option>
       	<option>Mrs</option>
       	<option>Miss</option>
-      </select>
+      </select><br>
     </div>
     </div>
     <div class="form-group">
       <label class="control-label col-sm-2" for="password">Password:</label>
       <div class="col-sm-10">          
-        <input type="password>" class="form-control" id="password" placeholder="Enter Password"name="password">
+        <input type="password>" class="form-control" id="password" placeholder="Enter Password"name="password"><br>
       </div>
     </div>
     <div class="form-group">        
@@ -69,6 +75,7 @@
       </div>
     </div>
   </form>
+    
 </div>
 
 

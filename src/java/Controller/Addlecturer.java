@@ -36,7 +36,7 @@ public class Addlecturer extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         String FirstName=request.getParameter("first_name");
         String SecondName=request.getParameter("second_name");
-        
+        String username = request.getParameter("username");
 //        PrintWriter out= response.getWriter();
 //        out.print(SecondName);
         String Category=request.getParameter("category");
@@ -45,7 +45,7 @@ public class Addlecturer extends HttpServlet {
         String Password=request.getParameter("password");
         String LecturerID=request.getParameter("lecturerID");
         
-            Lecturer lec= new Lecturer(FirstName,SecondName,Category,Department,Salutation,Password,LecturerID);
+            Lecturer lec= new Lecturer(FirstName,SecondName,Category,Department,Salutation,Password,LecturerID,username);
             DAOcontroller aOcontroller= new DAOcontroller();
             
             aOcontroller.addLecturer(lec);
