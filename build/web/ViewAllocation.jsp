@@ -10,27 +10,19 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title></title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<!--        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">-->
-        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css"
+        <script src="https://code.jquery.com/jquery-3.4.1.js"integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="crossorigin="anonymous"></script>
+        <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"</script>
         
-        
-        <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js">
-        <script  src="bootstrap/js/bootstrap.min.js"></script>
-    
-    
-          
-         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
+        <script>
+            $(document).ready( function () {
+    $('#myTable').DataTable();
+      } );
+        </script>
   
-         <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
-         <link rel="stylesheet" type="text/css" href="/DataTables/datatables.css">
- 
-         <script type="text/javascript" charset="utf8" src="/DataTables/datatables.js"></script>
-       
-        <title>JSP Page</title>
+        
          <style>
 .table{
   width: 60%;
@@ -82,11 +74,6 @@ th {
                     <%} %>
                 </tbody>
             </table>
-                <script>
-  $(document).ready(function () {
-    $('#myTable').DataTable();
-    $('.dataTables_length').addClass('bs-select');
-  });
-</script>
+ 
     </body>
 </html>

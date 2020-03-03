@@ -3,8 +3,7 @@
     Created on : Feb 26, 2020, 12:35:52 PM
     Author     : Keboi
 --%>
-<%@page import="java.util.ArrayList"%>
-<%@page import="Kemboi.Courses"%>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!doctype html>
 <html lang="en">
@@ -28,22 +27,17 @@
 </head>
 
 <body>
-    <!-- ============================================================== -->
-    <!-- main wrapper -->
-    <!-- ============================================================== -->
+ 
     <div class="dashboard-main-wrapper">
-        <!-- ============================================================== -->
-        <!-- navbar -->
-        <!-- ============================================================== -->
+      
         <div class="dashboard-header">
             <nav class="navbar navbar-expand-lg bg-white fixed-top">
-                <a class="navbar-brand" href="index_1.jsp">Online Course allocation</a>
+                <a class="navbar-brand" href="Hodtasks.jsp">Online Course allocation</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse " id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto navbar-right-top">
-                       
                         <li class="nav-item dropdown nav-user">
                             <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/avatar-1.jpg" alt="" class="user-avatar-md rounded-circle"></a>
                             <div class="dropdown-menu dropdown-menu-right nav-user-dropdown" aria-labelledby="navbarDropdownMenuLink2">
@@ -62,12 +56,7 @@
                 </div>
             </nav>
         </div>
-        <!-- ============================================================== -->
-        <!-- end navbar -->
-        <!-- ============================================================== -->
-        <!-- ============================================================== -->
-        <!-- left sidebar -->
-        <!-- ============================================================== -->
+
         <div class="nav-left-sidebar sidebar-dark">
             <div class="menu-list">
                 <nav class="navbar navbar-expand-lg navbar-light">
@@ -82,56 +71,35 @@
                             </li>
                             
                             <li class="nav-item ">
-                                <a class="nav-link" href="viewAllocations"  aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i></i>View Allocations <span class="badge badge-success"></span></a>
+                                <a class="nav-link" href="HodtaskAddCourse.jsp"  aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i></i>Add Course <span class="badge badge-success"></span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="ViewCourses"  aria-expanded="false" data-target="#submenu-2" aria-controls="submenu-2"><i></i>View Courses</a>
+                                <a class="nav-link" href="HodtaskCourseAllocation.jsp" aria-expanded="false" data-target="#submenu-2" aria-controls="submenu-2"><i></i>Add Courses Allocation</a>
                               
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="ViewDepartment"  aria-expanded="false" data-target="#submenu-3" aria-controls="submenu-3"><i></i>View Department</a>
+                                <a class="nav-link" href="HodtaskAddDepartment.jsp"  aria-expanded="false" data-target="#submenu-3" aria-controls="submenu-3"><i></i>Add Department</a>
                   
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link" href="ViewSemesterOfStudy"  aria-expanded="false" data-target="#submenu-4" aria-controls="submenu-4"><i></i>View Semester Of Study</a>
+                                <a class="nav-link" href="HodtaskAddLecturer.jsp"  aria-expanded="false" data-target="#submenu-4" aria-controls="submenu-4"><i></i>Add Lecturer</a>
+                           
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="ViewYearOfStudy" aria-expanded="false" data-target="#submenu-5" aria-controls="submenu-5"><i></i>View Year Of Study</a>
-                                
+                                <a class="nav-link" href="HodtaskAddSemesterOfStudy.jsp"  aria-expanded="false" data-target="#submenu-5" aria-controls="submenu-5"><i></i>Add Semester Of Study</a>
+                             
                             </li>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="HodtaskAddYearOfStudy.jsp"  aria-expanded="false" data-target="#submenu-5" aria-controls="submenu-5"><i></i>Add Year Of Study</a>
+                             
+                            </li>
+ 
                         </ul>
                     </div>
                 </nav>
             </div>
         </div>
-        <div class="dashboard-wrapper">
-            <div class="dashboard-ecommerce">
-                <div class="container-fluid dashboard-content ">
-                   
-<%    
-          ArrayList<Courses> courseses=(ArrayList<Courses>)session.getAttribute("courses");
-          System.out.println(courseses.size());
-        %>
-        <table class="table table-sm table-bordered" id="myTable">
-                <thead>
-                    <tr>
-                        <th>CourseName</th>
-                        <th>UnitCode</th>
-                    </tr>
-                        
-                </thead>
-                <tbody id="myTable">
-                    <%for(Courses c:courseses){ %>
-                    <tr>
-                        <td><%= c.getCourseName()%></td>
-                        <td><%= c.getUnitCode() %></td>
-                    </tr>
-                    <%} %>
-                </tbody>
-            </table>
-                    <!-- ============================================================== -->
-                    <!-- end pageheader  -->
-                    <!-- ============================================================== -->
 
     <script src="assets/vendor/jquery/jquery-3.3.1.min.js"></script>
     <!-- bootstap bundle js -->

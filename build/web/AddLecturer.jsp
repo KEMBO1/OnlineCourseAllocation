@@ -17,7 +17,6 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <br><br><br>
-<form action="Addlecturer" method="post">
 <div class="container">
   <form class="form-horizontal" action="/Addlecturer" method="post">
     <div class="form-group">

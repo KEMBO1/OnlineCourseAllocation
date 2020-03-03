@@ -1,14 +1,15 @@
 <%-- 
-    Document   : index.jsp
-    Created on : Feb 21, 2020, 11:51:01 PM
+    Document   : Login1
+    Created on : Feb 27, 2020, 4:49:11 PM
     Author     : Keboi
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <title></title>
+  <title>Online Course Allocation</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -56,7 +57,7 @@
         <div class="row align-items-center">
           <div class="col-lg-9 d-none d-lg-block">
             <a href="#" class="small mr-3"><span class="icon-question-circle-o mr-2"></span> Have a questions?</a> 
-            <a href="#" class="small mr-3"><span class="icon-phone2 mr-2"></span> +254798767714</a> 
+            <a href="#" class="small mr-3"><span class="icon-phone2 mr-2"></span>+254798767714</a> 
             <a href="#" class="small mr-3"><span class="icon-envelope-o mr-2"></span> anthokemboi6@.com</a> 
           </div>
           <div class="col-lg-3 text-right">
@@ -118,33 +119,62 @@
     </header>
 
     
-    <div class="hero-slide owl-carousel site-blocks-cover">
-      <div class="intro-section" style="background-image: url('images/hero_1.jpg');">
+    <div class="site-section ftco-subscribe-1 site-blocks-cover pb-4" style="background-image: url('images/bg_1.jpg')">
         <div class="container">
-          <div class="row align-items-center">
-            <div class="col-lg-12 mx-auto text-center" data-aos="fade-up">
-              <h1>Online Course Allocation Management System</h1>
+          <div class="row align-items-end justify-content-center text-center">
+            <div class="col-lg-7">
+              <h2 class="mb-0">Login</h2>
+              <p>Login in to the system.</p>
             </div>
           </div>
         </div>
-      </div>
-
-      <div class="intro-section" style="background-image: url('images/hero_1.jpg');">
-        <div class="container">
-          <div class="row align-items-center">
-            <div class="col-lg-12 mx-auto text-center" data-aos="fade-up">
-              <h1>  Welcome   </h1>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
+      </div> 
     
 
-    <div></div>
+    <div class="custom-breadcrumns border-bottom">
+      <div class="container">
+        <a href="index.jsp">Home</a>
+        <span class="mx-3 icon-keyboard_arrow_right"></span>
+        <span class="current">Login</span>
+      </div>
+    </div>
+
+    <div class="site-section">
+        <form class="form-horizontal" action="login" method="post">
+        <div class="container">
+
+            <div class="row justify-content-center">
+                <div class="col-md-5">
+                    <div class="row">
+                        <div class="col-md-12 form-group">
+                            <label for="username">Username</label>
+                            <input type="text" name="username" id="username" class="form-control form-control-lg">
+                        </div>
+                        <div class="col-md-12 form-group">
+                            <label for="category">Category</label>
+                            <!--<input type="text" name="category" id="category" class="form-control form-control-lg">-->
+                            <select class="form-control" id="category" placeholder="Select category" name="category"><br>
+      	                     <option>Hod</option>
+      	                     <option>Lecturer</option>
+                             </select>
+                        </div>
+                        <div class="col-md-12 form-group">
+                            <label for="pword">Password</label>
+                            <input type="password" name="password" id="pword" class="form-control form-control-lg">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <input type="submit" value="Log In" class="btn btn-primary btn-lg px-5">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
-  
+        </form>
+    </div>
+ 
   <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#51be78"/></svg></div>
 
   <script src="js/jquery-3.3.1.min.js"></script>

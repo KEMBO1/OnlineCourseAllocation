@@ -24,6 +24,8 @@ import javax.servlet.http.HttpSession;
 @WebServlet(name = "login", urlPatterns = {"/login"})
 public class login extends HttpServlet {
 
+    private String category;
+
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -37,12 +39,13 @@ public class login extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         String Username=request.getParameter("username");
+        String Category=request.getParameter(category);
         String Password=request.getParameter("password");
         
-       Login LOGIN =new Login(Username, Password);
+       Login LOGIN =new Login(Username,Category, Password);
         DAOcontroller aOcontroller=new DAOcontroller();
         
-        Boolean answer= aOcontroller.login(Username, Password, "lecturer");
+        Boolean answer= aOcontroller.login(Username,Category, Password, "lecturer");
         
         PrintWriter out = response.getWriter();
         //out.print(answer);

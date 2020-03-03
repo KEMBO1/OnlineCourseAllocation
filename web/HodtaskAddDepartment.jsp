@@ -3,8 +3,8 @@
     Created on : Feb 26, 2020, 12:35:52 PM
     Author     : Keboi
 --%>
-<%@page import="java.util.ArrayList"%>
-<%@page import="Kemboi.Courses"%>
+<%--<%@page import="java.util.ArrayList"%>
+<%@page import="Kemboi.Courses"%>--%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!doctype html>
 <html lang="en">
@@ -37,7 +37,7 @@
         <!-- ============================================================== -->
         <div class="dashboard-header">
             <nav class="navbar navbar-expand-lg bg-white fixed-top">
-                <a class="navbar-brand" href="index_1.jsp">Online Course allocation</a>
+                <a class="navbar-brand" href="Hodtasks.jsp">Online Course allocation</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -82,22 +82,26 @@
                             </li>
                             
                             <li class="nav-item ">
-                                <a class="nav-link" href="viewAllocations"  aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i></i>View Allocations <span class="badge badge-success"></span></a>
+                                <a class="nav-link" href="HodtaskAddCourse.jsp"  aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i></i>Add Course<span class="badge badge-success"></span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="ViewCourses"  aria-expanded="false" data-target="#submenu-2" aria-controls="submenu-2"><i></i>View Courses</a>
+                                <a class="nav-link" href="HodtaskCourseAllocation.jsp"  aria-expanded="false" data-target="#submenu-2" aria-controls="submenu-2"><i></i>Add Courses Allocation</a>
                               
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="ViewDepartment"  aria-expanded="false" data-target="#submenu-3" aria-controls="submenu-3"><i></i>View Department</a>
+                                <a class="nav-link" href="HodtaskAddDepartment.jsp"  aria-expanded="false" data-target="#submenu-3" aria-controls="submenu-3"><i></i>Add Department</a>
                   
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link" href="ViewSemesterOfStudy"  aria-expanded="false" data-target="#submenu-4" aria-controls="submenu-4"><i></i>View Semester Of Study</a>
+                                <a class="nav-link" href="HodtaskAddLecturer.jsp"  aria-expanded="false" data-target="#submenu-4" aria-controls="submenu-4"><i></i>Add Lecturer</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="ViewYearOfStudy" aria-expanded="false" data-target="#submenu-5" aria-controls="submenu-5"><i></i>View Year Of Study</a>
+                                <a class="nav-link" href="HodtaskAddSemesterOfStudy.jsp" aria-expanded="false" data-target="#submenu-5" aria-controls="submenu-5"><i></i>Add Semester Of Study</a>
                                 
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="HodtaskAddYearOfStudy.jsp"  aria-expanded="false" data-target="#submenu-5" aria-controls="submenu-5"><i></i>Add Year Of Study</a>
+                             
                             </li>
                         </ul>
                     </div>
@@ -108,30 +112,29 @@
             <div class="dashboard-ecommerce">
                 <div class="container-fluid dashboard-content ">
                    
-<%    
-          ArrayList<Courses> courseses=(ArrayList<Courses>)session.getAttribute("courses");
-          System.out.println(courseses.size());
-        %>
-        <table class="table table-sm table-bordered" id="myTable">
-                <thead>
-                    <tr>
-                        <th>CourseName</th>
-                        <th>UnitCode</th>
-                    </tr>
-                        
-                </thead>
-                <tbody id="myTable">
-                    <%for(Courses c:courseses){ %>
-                    <tr>
-                        <td><%= c.getCourseName()%></td>
-                        <td><%= c.getUnitCode() %></td>
-                    </tr>
-                    <%} %>
-                </tbody>
-            </table>
-                    <!-- ============================================================== -->
-                    <!-- end pageheader  -->
-                    <!-- ============================================================== -->
+<div class="container">
+    <form action="AddDepartment" method="post">
+  <form class="form-horizontal" action="" method="post">
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="department_name">DepartmentName:</label>
+      <div class="col-sm-10">
+          <input type="text" class="form-control" id="yearID" placeholder="Enter department_name" name="department_name"><br>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="departmentID">DepartmentID:</label>
+      <div class="col-sm-10">          
+      <input type="number" class="form-control" id="departmentID" placeholder="Enter departmentID" name="departmentID"><br>
+  </div>
+</div>
+    <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-default">Submit</button>
+      </div>
+    </div>
+  </form>
+</div>
+
 
     <script src="assets/vendor/jquery/jquery-3.3.1.min.js"></script>
     <!-- bootstap bundle js -->

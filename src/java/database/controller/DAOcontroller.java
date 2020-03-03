@@ -97,7 +97,7 @@ public class DAOcontroller {
         return db.insertToDB(statemnt);
     }
     
-        public  boolean login(String username, String password, String table){
+        public  boolean login(String username, String category,String password, String table){
 //            String query="select from `onlinecourse-allocation`.`lecturer` where LecturerID='"+login.getUsername()+"' and Password= '"+login.getPassword()+"'";
 //            System.out.println(query);
 //             Boolean answer=false;       

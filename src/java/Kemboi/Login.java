@@ -11,6 +11,7 @@ package Kemboi;
  */
 public class Login {
     private String Username;
+    private String Category;
     private String Password;
 
     public String getUsername() {
@@ -21,6 +22,14 @@ public class Login {
         this.Username = Username;
     }
 
+    public String getCategory() {
+        return Category;
+    }
+
+    public void setCategory(String Category) {
+        this.Category = Category;
+    }
+
     public String getPassword() {
         return Password;
     }
@@ -29,13 +38,10 @@ public class Login {
         this.Password = Password;
     }
 
-    public Login(String Username, String Password) {
+    public Login(String Username, String Category, String Password) {
         this.Username = Username;
+        this.Category = Category;
         this.Password = Password;
     }
 
-   
-    
-    
-    
-}
+} 

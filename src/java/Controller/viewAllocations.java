@@ -46,7 +46,7 @@ public class viewAllocations extends HttpServlet {
         
         Retrive retrive=new Retrive();
         ArrayList<CourseAllocation> courseAllocations =retrive.viewAllocations();
-        
+        out.print(courseAllocations);
         session.setAttribute("Alloctions", courseAllocations);
         
         RequestDispatcher dispatcher= getServletContext().getRequestDispatcher("/Allocations.jsp");
