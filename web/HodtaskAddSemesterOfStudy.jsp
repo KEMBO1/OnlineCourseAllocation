@@ -118,14 +118,15 @@
     <div class="form-group">
       <label class="control-label col-sm-2" for="semesterID">SemesterID:</label>
       <div class="col-sm-10">
-        <input type="number" class="form-control" id="semesterID" placeholder="Enter semesterID" name="semesterID">
+        <input type="number" class="form-control" id="semesterID" required="required" placeholder="Enter semesterID" name="semesterID">
       </div>
     </div>
     <div class="form-group">
       <label class="control-label col-sm-2" for="semester_name">SemesterName:</label>
       <div class="col-sm-10">          
-        <select class="form-control" id="semester_name" placeholder="Select Semester" name="semester_name">
-      	<option>Semester One</option>
+        <select class="form-control" id="semester_name" required="required" placeholder="Select Semester" name="semester_name">
+        <option>  </option>
+        <option>Semester One</option>
       	<option>Semester Two</option>
       	<option>Semester Three</option>
       </select>

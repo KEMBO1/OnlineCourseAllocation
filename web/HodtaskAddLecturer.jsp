@@ -117,26 +117,27 @@
     <div class="form-group">
       <label class="control-label col-sm-2" for="first_name">FirstName:</label>
       <div class="col-sm-10">
-          <input type="text" class="form-control" id="first_name" placeholder="Enter firstname" name="first_name"><br>
+          <input type="text" class="form-control" id="first_name" required="required" placeholder="Enter firstname" name="first_name"><br>
       </div>
     </div>
     <div class="form-group">
       <label class="control-label col-sm-2" for="second_name">SecondName:</label>
       <div class="col-sm-10">          
-          <input type="text" class="form-control" id="second_name" placeholder="Enter secondname" name="second_name"><br>
+          <input type="text" class="form-control" id="second_name" required="required" placeholder="Enter secondname" name="second_name"><br>
       </div>
     </div>
       <div class="form-group">
       <label class="control-label col-sm-2" for="second_name">Username</label>
       <div class="col-sm-10">          
-          <input type="text" class="form-control" id="second_name" placeholder="" name="username"><br>
+          <input type="text" class="form-control" id="second_name" required="required" placeholder="" name="username"><br>
       </div>
     </div>
     <div class="form-group">
       <label class="control-label col-sm-2" for="category">Category:</label>
       <div class="col-sm-10">          
-        <select class="form-control" id="category" placeholder="Select category" name="category"><br>
-      	<option>Hod</option>
+        <select class="form-control" id="category" required="required" placeholder="Select category" name="category"><br>
+        <option>   </option>
+        <option>Hod</option>
       	<option>Lecturer</option>
       </select><br>
       </div>
@@ -144,14 +145,15 @@
     <div class="form-group">
       <label class="control-label col-sm-2" for="department">Department:</label>
       <div class="col-sm-10">          
-        <input type="text>" class="form-control" id="department" placeholder="Enter department"name="department"><br>
+        <input type="text>" class="form-control" id="department" required="required" placeholder="Enter department"name="department"><br>
       </div>
     </div>
     <div class="form-group">
       <label class="control-label col-sm-2" for="salutation">Salutation:</label>
       <div class="col-sm-10"> 
-      <select class="form-control" id="salutation" placeholder="Select salutation" name="salutation">
-      	<option>Mr</option>
+      <select class="form-control" id="salutation" required="required"placeholder="Select salutation" name="salutation">
+          <option>   </option>
+         <option>Mr</option>
       	<option>Mrs</option>
       	<option>Miss</option>
       </select><br>
@@ -160,7 +162,7 @@
     <div class="form-group">
       <label class="control-label col-sm-2" for="password">Password:</label>
       <div class="col-sm-10">          
-        <input type="password" class="form-control" id="password" placeholder="Enter Password"name="password"><br>
+        <input type="password" class="form-control" id="password" required="required" placeholder="Enter Password"name="password"><br>
       </div>
     </div>
     <div class="form-group">        

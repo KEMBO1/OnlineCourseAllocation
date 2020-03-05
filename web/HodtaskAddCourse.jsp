@@ -118,13 +118,13 @@
     <div class="form-group">
       <label class="control-label col-sm-2" for="course_name">CourseName:</label>
       <div class="col-sm-10">
-          <input type="text" class="form-control" id="yearID" placeholder="Enter course_name" name="course_name"><br>
+          <input type="text" class="form-control" id="yearID" required="required" placeholder="Enter course_name" name="course_name"><br>
       </div>
     </div>
     <div class="form-group">
       <label class="control-label col-sm-2" for="unit_code">UnitCode:</label>
       <div class="col-sm-10">          
-          <input type="text" class="form-control" id="unit_code" placeholder="Enter unit_code" name="unit_code"><br>
+          <input type="text" class="form-control" id="unit_code" required="required" placeholder="Enter unit_code" name="unit_code"><br>
   </div>
 </div>
     <div class="form-group">        

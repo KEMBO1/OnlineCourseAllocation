@@ -148,19 +148,20 @@
                     <div class="row">
                         <div class="col-md-12 form-group">
                             <label for="username">Username</label>
-                            <input type="text" name="username" id="username" class="form-control form-control-lg">
+                            <input type="text" name="username" id="username" required="required" class="form-control form-control-lg">
                         </div>
                         <div class="col-md-12 form-group">
                             <label for="category">Category</label>
                             <!--<input type="text" name="category" id="category" class="form-control form-control-lg">-->
-                            <select class="form-control" id="category" placeholder="Select category" name="category"><br>
+                            <select class="form-control" id="category" required="required" placeholder="Select category" name="category"><br>
+                                <option>  </option>
                                 <option value="Hod">Hod</option>
                                 <option value="Lecturer">Lecturer</option>
                              </select>
                         </div>
                         <div class="col-md-12 form-group">
                             <label for="pword">Password</label>
-                            <input type="password" name="password" id="pword" class="form-control form-control-lg">
+                            <input type="password" name="password" id="pword" required="required" class="form-control form-control-lg">
                         </div>
                     </div>
                     <div class="row">
