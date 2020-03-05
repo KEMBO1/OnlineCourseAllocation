@@ -41,7 +41,7 @@
         <!-- ============================================================== -->
         <div class="dashboard-header">
             <nav class="navbar navbar-expand-lg bg-white fixed-top">
-                <a class="navbar-brand" href="Hodtasks.jsp">Online Course allocation</a>
+                <a class="navbar-brand" href="">Online Course allocation</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -89,7 +89,7 @@
                                 <a class="nav-link" href="HodtaskAddCourse.jsp"  aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i></i>Add Course<span class="badge badge-success"></span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="HodtaskCourseAllocation.jsp"  aria-expanded="false" data-target="#submenu-2" aria-controls="submenu-2"><i></i>Add Courses Allocation</a>
+                                <a class="nav-link" href="GetCourseDetails"  aria-expanded="false" data-target="#submenu-2" aria-controls="submenu-2"><i></i>Add Courses Allocation</a>
                               
                             </li>
                             <li class="nav-item">
@@ -129,10 +129,11 @@
 
 
         %>
+        <div class="col-sm-10">
         <form action="AddCourseAllocation" method="post">
             Lecturers:
             <!--<input type="number" name="lecturerID">-->
-           <select name="lecturerID">
+            <select name="lecturerID" class="form-control">
                 <% for(Lecturer lecturer:lecturers){ %>
                    <option value="<%=lecturer.getLecturerID() %>">
                       <%= lecturer.getSalutation()+"  "+lecturer.getFirstName()+" "+lecturer.getSecondName() %>
@@ -142,7 +143,7 @@
             Courses:
             <!--<input type="text" name="courseID"><br>-->
             
-            <select name="courseID">
+            <select name="courseID"class="form-control">
                 <% for(Courses  courses:courseses){ %>
                    <option value="<%=courses.getUnitCode()%>">
                       <%= courses.getCourseName() %>
@@ -152,7 +153,7 @@
             Departments:
             <!--<input type="number" name="departmentID"><br>-->
             
-            <select name="departmentID">
+            <select name="departmentID"class="form-control">
                 <% for(Department  department:departments){ %>
                    <option value="<%=department.getDepartmentID()%>">
                       <%= department.getDepartmentName()%>
@@ -162,7 +163,7 @@
             Semester:
             <!--<input type="number" name="semesterID" min="1" max="3"><br>!-->
             
-            <select name="semesterID">
+            <select name="semesterID"class="form-control">
                 <% for(SemesterOfStudy semesterOfStudy:semesterOfStudys ){ %>
                    <option value="<%= semesterOfStudy.getSemesterID()%>">
                       <%= semesterOfStudy.getSemesterName()%>
@@ -173,7 +174,7 @@
             Year:
             <!--<input type="number" name="yearID"><br>!-->
             
-            <select name="yearID">
+            <select name="yearID"class="form-control">
                 <% for(YearOfStudy yearOfStudy:yearOfStudys ){ %>
                    <option value="<%= yearOfStudy.getYearID()%>">
                       <%= yearOfStudy.getYearName()%>
@@ -183,10 +184,11 @@
             
             
            Year_Generated:
-           <input type="text" value="<%= y.getYearName() %>" ><br>
+           <input type="text"class="form-control" value="<%= y.getYearName() %>" ><br>
            
             <input type="Submit" value="ADD">
-        </form>
+        </form
+        </div>
 
 </div>
 

@@ -12,11 +12,39 @@
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/Users/Keboi/Documents/NetBeansProjects/OnlineCourseAllocationDB/web/AddCourseAllocation.jsp</file>
             <file>file:/C:/Users/Keboi/Documents/NetBeansProjects/OnlineCourseAllocationDB/web/Courses.jsp</file>
-            <file>file:/C:/Users/Keboi/Documents/NetBeansProjects/OnlineCourseAllocationDB/web/AddCourse.html</file>
-            <file>file:/C:/Users/Keboi/Documents/NetBeansProjects/OnlineCourseAllocationDB/web/HodtaskAddCourse.jsp</file>
+            <file>file:/C:/Users/Keboi/Documents/NetBeansProjects/OnlineCourseAllocationDB/src/java/Controller/viewAllocations.java</file>
+            <file>file:/C:/Users/Keboi/Documents/NetBeansProjects/OnlineCourseAllocationDB/src/java/Controller/ViewSemesterOfStudy.java</file>
+            <file>file:/C:/Users/Keboi/Documents/NetBeansProjects/OnlineCourseAllocationDB/web/Login1.jsp</file>
+            <file>file:/C:/Users/Keboi/Documents/NetBeansProjects/OnlineCourseAllocationDB/web/HodtaskAddDepartment.jsp</file>
+            <file>file:/C:/Users/Keboi/Documents/NetBeansProjects/OnlineCourseAllocationDB/web/AddCourseAllocation.html</file>
+            <file>file:/C:/Users/Keboi/Documents/NetBeansProjects/OnlineCourseAllocationDB/src/java/Controller/AddCourseAllocation.java</file>
+            <file>file:/C:/Users/Keboi/Documents/NetBeansProjects/OnlineCourseAllocationDB/src/java/Controller/ViewDepartment.java</file>
+            <file>file:/C:/Users/Keboi/Documents/NetBeansProjects/OnlineCourseAllocationDB/web/AddSemesterOfStudy.html</file>
+            <file>file:/C:/Users/Keboi/Documents/NetBeansProjects/OnlineCourseAllocationDB/web/index.jsp</file>
+            <file>file:/C:/Users/Keboi/Documents/NetBeansProjects/OnlineCourseAllocationDB/src/java/Controller/Addlecturer.java</file>
             <file>file:/C:/Users/Keboi/Documents/NetBeansProjects/OnlineCourseAllocationDB/web/index_1.jsp</file>
+            <file>file:/C:/Users/Keboi/Documents/NetBeansProjects/OnlineCourseAllocationDB/src/java/database/controller/DAOcontroller.java</file>
+            <file>file:/C:/Users/Keboi/Documents/NetBeansProjects/OnlineCourseAllocationDB/web/AddYearOfStudy.html</file>
+            <file>file:/C:/Users/Keboi/Documents/NetBeansProjects/OnlineCourseAllocationDB/src/java/Controller/GetCourseDetails.java</file>
+            <file>file:/C:/Users/Keboi/Documents/NetBeansProjects/OnlineCourseAllocationDB/web/AddSemesterOfStudy.jsp</file>
+            <file>file:/C:/Users/Keboi/Documents/NetBeansProjects/OnlineCourseAllocationDB/src/java/Controller/AddSemesterOfStudy.java</file>
+            <file>file:/C:/Users/Keboi/Documents/NetBeansProjects/OnlineCourseAllocationDB/web/AddCourse.html</file>
+            <file>file:/C:/Users/Keboi/Documents/NetBeansProjects/OnlineCourseAllocationDB/src/java/Controller/ViewCourses.java</file>
+            <file>file:/C:/Users/Keboi/Documents/NetBeansProjects/OnlineCourseAllocationDB/web/HodtaskAddSemesterOfStudy.jsp</file>
+            <file>file:/C:/Users/Keboi/Documents/NetBeansProjects/OnlineCourseAllocationDB/web/HodtaskAddLecturer.jsp</file>
+            <file>file:/C:/Users/Keboi/Documents/NetBeansProjects/OnlineCourseAllocationDB/web/HodtaskAddCourse.jsp</file>
+            <file>file:/C:/Users/Keboi/Documents/NetBeansProjects/OnlineCourseAllocationDB/web/HodtaskAddYearOfStudy.jsp</file>
+            <file>file:/C:/Users/Keboi/Documents/NetBeansProjects/OnlineCourseAllocationDB/web/HodtaskCourseAllocation.jsp</file>
+            <file>file:/C:/Users/Keboi/Documents/NetBeansProjects/OnlineCourseAllocationDB/src/java/Controller/ViewLecturer.java</file>
+            <file>file:/C:/Users/Keboi/Documents/NetBeansProjects/OnlineCourseAllocationDB/web/AddLecturer.jsp</file>
+            <file>file:/C:/Users/Keboi/Documents/NetBeansProjects/OnlineCourseAllocationDB/src/java/Controller/login.java</file>
+            <file>file:/C:/Users/Keboi/Documents/NetBeansProjects/OnlineCourseAllocationDB/src/java/Controller/AddDepartment.java</file>
+            <file>file:/C:/Users/Keboi/Documents/NetBeansProjects/OnlineCourseAllocationDB/src/java/Controller/ViewYearOfStudy.java</file>
+            <file>file:/C:/Users/Keboi/Documents/NetBeansProjects/OnlineCourseAllocationDB/web/ViewSemesterOfStudy.jsp</file>
             <file>file:/C:/Users/Keboi/Documents/NetBeansProjects/OnlineCourseAllocationDB/web/Hodtasks.jsp</file>
+            <file>file:/C:/Users/Keboi/Documents/NetBeansProjects/OnlineCourseAllocationDB/src/java/Kemboi/Lecturer.java</file>
         </group>
     </open-files>
 </project-private>

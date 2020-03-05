@@ -18,7 +18,7 @@
 </head>
 <br><br><br>
 <div class="container">
-  <form class="form-horizontal" action="/Addlecturer" method="post">
+  <form class="form-horizontal" action="Addlecturer" method="post">
     <div class="form-group">
       <label class="control-label col-sm-2" for="first_name">FirstName:</label>
       <div class="col-sm-10">

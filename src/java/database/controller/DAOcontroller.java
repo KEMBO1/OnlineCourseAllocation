@@ -123,7 +123,7 @@ public class DAOcontroller {
     ResultSet rs = null;
             Connection con = null;
             
-            String query = "select * from "+table+" where user_name = ? and Password = ?";
+            String query = "select * from "+table+" where user_name = ?,Category = ?, and Password = ?";
             
             Database db=new Database();
             
@@ -132,7 +132,8 @@ public class DAOcontroller {
             try {
                 pst = con.prepareStatement(query);
                 pst.setString(1, username);
-                pst.setString(2, password);
+                pst.setString(2, category);
+                pst.setString(3, password);
                 
                 rs = pst.executeQuery();
                 

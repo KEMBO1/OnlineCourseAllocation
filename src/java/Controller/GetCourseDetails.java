@@ -63,7 +63,7 @@ public class GetCourseDetails extends HttpServlet {
 
             System.out.println("EEEEEEEEEEEEEEEEE");
         
-        RequestDispatcher dispatcher=getServletContext().getRequestDispatcher("/AddCourseAllocation.jsp");
+        RequestDispatcher dispatcher=getServletContext().getRequestDispatcher("/HodtaskCourseAllocation.jsp");
         
         dispatcher.forward(request, response);
         }

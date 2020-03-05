@@ -154,8 +154,8 @@
                             <label for="category">Category</label>
                             <!--<input type="text" name="category" id="category" class="form-control form-control-lg">-->
                             <select class="form-control" id="category" placeholder="Select category" name="category"><br>
-      	                     <option>Hod</option>
-      	                     <option>Lecturer</option>
+                                <option value="Hod">Hod</option>
+                                <option value="Lecturer">Lecturer</option>
                              </select>
                         </div>
                         <div class="col-md-12 form-group">

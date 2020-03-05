@@ -38,74 +38,59 @@ public class login extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+       
+    
+    }
+
+    
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+         
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
         String Username=request.getParameter("username");
-        String Category=request.getParameter(category);
+        String Category=request.getParameter("category");
         String Password=request.getParameter("password");
         
+        PrintWriter out = response.getWriter();
+         out.print(Category);
        Login LOGIN =new Login(Username,Category, Password);
         DAOcontroller aOcontroller=new DAOcontroller();
+        if(Category.equals("Hod")){
+            Boolean answer1= aOcontroller.login(Username,Category, Password, "lecturer");
+            
+            if (answer1==true) {
+            
+            HttpSession session = request.getSession();
+            session.setAttribute("username", Username);
+            
+            RequestDispatcher dispatcher= getServletContext().getRequestDispatcher("/Hodtasks.jsp");
         
-        Boolean answer= aOcontroller.login(Username,Category, Password, "lecturer");
-        
-        PrintWriter out = response.getWriter();
-        //out.print(answer);
+            dispatcher.forward(request, response);
+//            PrintWriter out = response.getWriter();
+//            out.print("Yess");
+        }
+
        
-        if (answer==true) {
+    }else{
+        Boolean answer= aOcontroller.login(Username,Category, Password, "lecturer");
+            
+            if (answer==true) {
             
             HttpSession session = request.getSession();
             session.setAttribute("username", Username);
             
             RequestDispatcher dispatcher= getServletContext().getRequestDispatcher("/index_1.jsp");
         
-        dispatcher.forward(request, response);
-            
-        }
-        else{
-            RequestDispatcher dispatcher= getServletContext().getRequestDispatcher("/LOGIN.jsp");
-        
-        dispatcher.forward(request, response);
-        }
-       
-    
-    }
+            dispatcher.forward(request, response);
+//            PrintWriter out = response.getWriter();
+//            out.print("Yess");
+        }    
 
-    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
-    /**
-     * Handles the HTTP <code>GET</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        processRequest(request, response);
-    }
-
-    /**
-     * Handles the HTTP <code>POST</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        processRequest(request, response);
-    }
-
-    /**
-     * Returns a short description of the servlet.
-     *
-     * @return a String containing servlet description
-     */
-    @Override
-    public String getServletInfo() {
-        return "Short description";
-    }// </editor-fold>
-
+  }  
+} 
 }
