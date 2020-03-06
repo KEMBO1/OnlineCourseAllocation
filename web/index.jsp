@@ -60,8 +60,8 @@
             <a href="#" class="small mr-3"><span class="icon-envelope-o mr-2"></span> anthokemboi6@.com</a> 
           </div>
           <div class="col-lg-3 text-right">
-            <a href="Login1.jsp" class="small mr-3"><span class="icon-unlock-alt"></span> Log In</a>
-            <a href="Regester.jsp" class="small btn btn-primary px-4 py-2 rounded-0"><span class="icon-users"></span> Register</a>
+            <a href="Login1.jsp" class="small btn btn-primary px-4 py-2 rounded-0"><span class="icon-unlock-alt"></span> Log In</a>
+           
           </div>
         </div>
       </div>
@@ -103,9 +103,9 @@
           </div>
           <div class="ml-auto">
             <div class="social-wrap">
-              <a href="#"><span class="icon-facebook"></span></a>
+<!--              <a href="#"><span class="icon-facebook"></span></a>
               <a href="#"><span class="icon-twitter"></span></a>
-              <a href="#"><span class="icon-linkedin"></span></a>
+              <a href="#"><span class="icon-linkedin"></span></a>-->
 
               <a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black"><span
                 class="icon-menu h3"></span></a>

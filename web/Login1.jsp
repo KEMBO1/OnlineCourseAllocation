@@ -36,6 +36,7 @@
 
 
 
+
 </head>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -61,8 +62,8 @@
             <a href="#" class="small mr-3"><span class="icon-envelope-o mr-2"></span> anthokemboi6@.com</a> 
           </div>
           <div class="col-lg-3 text-right">
-            <a href="Login1.jsp" class="small mr-3"><span class="icon-unlock-alt"></span> Log In</a>
-            <a href="Regester.jsp" class="small btn btn-primary px-4 py-2 rounded-0"><span class="icon-users"></span> Register</a>
+            <a href="Login1.jsp" class="small btn btn-primary px-4 py-2 rounded-0"><span class="icon-unlock-alt"></span> Log In</a>
+<!--            <a href="Regester.jsp" class="small btn btn-primary px-4 py-2 rounded-0"><span class="icon-users"></span> Register</a>-->
           </div>
         </div>
       </div>
@@ -104,9 +105,9 @@
           </div>
           <div class="ml-auto">
             <div class="social-wrap">
-              <a href="#"><span class="icon-facebook"></span></a>
+<!--              <a href="#"><span class="icon-facebook"></span></a>
               <a href="#"><span class="icon-twitter"></span></a>
-              <a href="#"><span class="icon-linkedin"></span></a>
+              <a href="#"><span class="icon-linkedin"></span></a>-->
 
               <a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black"><span
                 class="icon-menu h3"></span></a>
@@ -150,6 +151,7 @@
                             <label for="username">Username</label>
                             <input type="text" name="username" id="username" required="required" class="form-control form-control-lg">
                         </div>
+                     
                         <div class="col-md-12 form-group">
                             <label for="category">Category</label>
                             <!--<input type="text" name="category" id="category" class="form-control form-control-lg">-->
@@ -161,12 +163,12 @@
                         </div>
                         <div class="col-md-12 form-group">
                             <label for="pword">Password</label>
-                            <input type="password" name="password" id="pword" required="required" class="form-control form-control-lg">
+                            <input type="password" name="password" id="Password" required="required" class="form-control form-control-lg">
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12">
+                        <div class="row">
+                        <div class="col-md-12">
                             <input type="submit" value="Log In" class="btn btn-primary btn-lg px-5">
+                        </div>
                         </div>
                     </div>
                 </div>
@@ -175,28 +177,6 @@
         </div>
         </form>
     </div>
- 
-  <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#51be78"/></svg></div>
-
-  <script src="js/jquery-3.3.1.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/jquery-ui.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/jquery.countdown.min.js"></script>
-  <script src="js/bootstrap-datepicker.min.js"></script>
-  <script src="js/jquery.easing.1.3.js"></script>
-  <script src="js/aos.js"></script>
-  <script src="js/jquery.fancybox.min.js"></script>
-  <script src="js/jquery.sticky.js"></script>
-  <script src="js/jquery.mb.YTPlayer.min.js"></script>
-
-
-
-
-  <script src="js/main.js"></script>
 
 </body>
 

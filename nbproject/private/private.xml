@@ -11,6 +11,28 @@
         </file>
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Users/Keboi/Documents/NetBeansProjects/OnlineCourseAllocationDB/web/AddCourseAllocation.jsp</file>
+            <file>file:/C:/Users/Keboi/Documents/NetBeansProjects/OnlineCourseAllocationDB/web/ViewAllocation.jsp</file>
+            <file>file:/C:/Users/Keboi/Documents/NetBeansProjects/OnlineCourseAllocationDB/src/java/Controller/GetCourseDetails.java</file>
+            <file>file:/C:/Users/Keboi/Documents/NetBeansProjects/OnlineCourseAllocationDB/web/Login1.jsp</file>
+            <file>file:/C:/Users/Keboi/Documents/NetBeansProjects/OnlineCourseAllocationDB/web/HodtaskAddDepartment.jsp</file>
+            <file>file:/C:/Users/Keboi/Documents/NetBeansProjects/OnlineCourseAllocationDB/web/ViewYearOfStudy.jsp</file>
+            <file>file:/C:/Users/Keboi/Documents/NetBeansProjects/OnlineCourseAllocationDB/src/java/Controller/ViewCourses.java</file>
+            <file>file:/C:/Users/Keboi/Documents/NetBeansProjects/OnlineCourseAllocationDB/web/HodtaskAddLecturer.jsp</file>
+            <file>file:/C:/Users/Keboi/Documents/NetBeansProjects/OnlineCourseAllocationDB/web/HodtaskAddSemesterOfStudy.jsp</file>
+            <file>file:/C:/Users/Keboi/Documents/NetBeansProjects/OnlineCourseAllocationDB/web/HodtaskAddCourse.jsp</file>
+            <file>file:/C:/Users/Keboi/Documents/NetBeansProjects/OnlineCourseAllocationDB/web/LOGIN.jsp</file>
+            <file>file:/C:/Users/Keboi/Documents/NetBeansProjects/OnlineCourseAllocationDB/web/HodtaskAddYearOfStudy.jsp</file>
+            <file>file:/C:/Users/Keboi/Documents/NetBeansProjects/OnlineCourseAllocationDB/web/HodtaskCourseAllocation.jsp</file>
+            <file>file:/C:/Users/Keboi/Documents/NetBeansProjects/OnlineCourseAllocationDB/web/ViewLecturer.jsp</file>
+            <file>file:/C:/Users/Keboi/Documents/NetBeansProjects/OnlineCourseAllocationDB/web/index.jsp</file>
+            <file>file:/C:/Users/Keboi/Documents/NetBeansProjects/OnlineCourseAllocationDB/web/ViewSemesterOfStudy.jsp</file>
+            <file>file:/C:/Users/Keboi/Documents/NetBeansProjects/OnlineCourseAllocationDB/web/ViewDepartment.jsp</file>
+            <file>file:/C:/Users/Keboi/Documents/NetBeansProjects/OnlineCourseAllocationDB/web/ViewCourses.jsp</file>
+            <file>file:/C:/Users/Keboi/Documents/NetBeansProjects/OnlineCourseAllocationDB/web/index_1.jsp</file>
+            <file>file:/C:/Users/Keboi/Documents/NetBeansProjects/OnlineCourseAllocationDB/web/Hodtasks.jsp</file>
+            <file>file:/C:/Users/Keboi/Documents/NetBeansProjects/OnlineCourseAllocationDB/web/Semesterofstudy.jsp</file>
+        </group>
     </open-files>
 </project-private>
