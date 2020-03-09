@@ -37,13 +37,12 @@ public class Addlecturer extends HttpServlet {
         String FirstName=request.getParameter("first_name");
         String SecondName=request.getParameter("second_name");
         String username = request.getParameter("username");
-//        PrintWriter out= response.getWriter();
-//        out.print(SecondName);
         String Category=request.getParameter("category");
         String Department=request.getParameter("department");
         String Salutation=request.getParameter("salutation");
         String Password=request.getParameter("password");
         String LecturerID=request.getParameter("lecturerID");
+        
         
             Lecturer lec= new Lecturer(FirstName,SecondName,Category,Department,Salutation,Password,LecturerID,username);
             DAOcontroller aOcontroller= new DAOcontroller();

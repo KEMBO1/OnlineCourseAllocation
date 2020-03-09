@@ -68,6 +68,7 @@ public class login extends HttpServlet {
             HttpSession session = request.getSession();
             session.setAttribute("username", Username);
             
+            
             RequestDispatcher dispatcher= getServletContext().getRequestDispatcher("/Hodtasks.jsp");
         
             dispatcher.forward(request, response);
@@ -83,6 +84,7 @@ public class login extends HttpServlet {
             
             HttpSession session = request.getSession();
             session.setAttribute("username", Username);
+            
             
             RequestDispatcher dispatcher= getServletContext().getRequestDispatcher("/index_1.jsp");
         

@@ -61,7 +61,7 @@ public class GetCourseDetails extends HttpServlet {
         session.setAttribute("yearOfStudys", yearOfStudys);
         session.setAttribute("yos", yos);
 
-            System.out.println("EEEEEEEEEEEEEEEEE");
+        
         
         RequestDispatcher dispatcher=getServletContext().getRequestDispatcher("/HodtaskCourseAllocation.jsp");
         
