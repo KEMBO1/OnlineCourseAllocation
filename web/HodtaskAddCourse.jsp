@@ -3,6 +3,9 @@
     Created on : Feb 26, 2020, 12:35:52 PM
     Author     : Keboi
 --%>
+<%@page import="Kemboi.YearOfStudy"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="Kemboi.SemesterOfStudy"%>
 <%--<%@page import="java.util.ArrayList"%>
 <%@page import="Kemboi.Courses"%>--%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -72,7 +75,7 @@
                             </li>
                             
                             <li class="nav-item ">
-                                <a class="nav-link" href="HodtaskAddCourse.jsp"  aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i></i>Add Course<span class="badge badge-success"></span></a>
+                                <a class="nav-link" href="ViewYearOfStudy"  aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i></i>Add Course<span class="badge badge-success"></span></a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="GetCourseDetails"  aria-expanded="false" data-target="#submenu-2" aria-controls="submenu-2"><i></i>Allocate Courses </a>
@@ -105,15 +108,67 @@
 <div class="container">
     <form action="AddCourse" method="post">
     <div class="form-group">
-      <label class="control-label col-sm-2" for="course_name">CourseName:</label>
+      <label class="control-label col-sm-2" for="year">year:</label>
       <div class="col-sm-10">
-          <input type="text" class="form-control" id="yearID" required="required" placeholder="Enter course_name" name="course_name"><br>
+          <select class="form-control" name="year" id="YearID">
+               <%    
+          ArrayList<YearOfStudy> yearOfStudys=(ArrayList<YearOfStudy>)session.getAttribute("yearOfStudy");
+          System.out.println(yearOfStudys.size());
+        %>
+              <% for(YearOfStudy yearOfStudy:yearOfStudys){ %>
+              <option value="<%= yearOfStudy.getYearID() %>">
+                      <%= yearOfStudy.getYearName() %>
+                   </option>
+                <% }  %>
+          </select>
+
       </div>
     </div>
     <div class="form-group">
-      <label class="control-label col-sm-2" for="unit_code">UnitCode:</label>
+      <label class="control-label col-sm-2" for="semester">semester:</label>
+      <div class="col-sm-10">
+      <select class="form-control" name="semester" id="SemesterID">
+         <%    
+          ArrayList<SemesterOfStudy>semesterOfStudys=(ArrayList<SemesterOfStudy>)session.getAttribute("semesterOfStudys");
+          System.out.println(yearOfStudys.size());
+        %>
+        <%for(SemesterOfStudy SemesterOfStudy:semesterOfStudys){ %>
+              <option value="<%= SemesterOfStudy.getSemesterID()%>">
+                  <%= SemesterOfStudy.getSemesterName() %>
+              </option>  
+              <% }  %>
+          </select>          
+          
+  </div>
+</div>
+      <div class="form-group">
+      <label class="control-label col-sm-2" for="coursecode">coursecode</label>
       <div class="col-sm-10">          
-          <input type="text" class="form-control" id="unit_code" required="required" placeholder="Enter unit_code" name="unit_code"><br>
+          <input type="text" class="form-control" id="coursecode" placeholder="Enter coursecode" name="coursecode"><br>
+  </div>
+</div>
+      <div class="form-group">
+      <label class="control-label col-sm-2" for="course_title">course_title</label>
+      <div class="col-sm-10">          
+          <input type="text" class="form-control" id="course_title" placeholder="Enter course_title" name="course_title"><br>
+  </div>
+</div>
+      <div class="form-group">
+      <label class="control-label col-sm-2" for="lecturing_hours">lecturing_hours</label>
+      <div class="col-sm-10">          
+          <input type="text" class="form-control" id="lecturing_hours" placeholder="Enter lecturing_hours" name="lecturing_hours"><br>
+  </div>
+</div>
+      <div class="form-group">
+      <label class="control-label col-sm-2" for="practicals_hours">practicals_hours</label>
+      <div class="col-sm-10">          
+          <input type="text" class="form-control" id="lecturing_hours" placeholder="Enter practicals_hours" name="practicals_hours"><br>
+  </div>
+</div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="cummulative">cummulative</label>
+      <div class="col-sm-10">          
+          <input type="number" class="form-control" id="lecturing_hours" placeholder="Enter cummulative" name="cummulative"><br>
   </div>
 </div>
     <div class="form-group">        

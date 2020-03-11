@@ -25,6 +25,24 @@
     <link rel="stylesheet" href="assets/vendor/fonts/flag-icon-css/flag-icon.min.css">
     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
     <title>Online Course Allocation</title>
+           <style>
+.table{
+  width: 100%;
+  margin-right: 20%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+</style>
 </head>
 
 <body>
@@ -115,16 +133,26 @@
         <table class="table table-sm table-bordered" id="myTable">
                 <thead>
                     <tr>
-                        <th>CourseName</th>
-                        <th>UnitCode</th>
+                        <th>Year of Study</th>
+                        <th>Semester of Study</th>
+                        <th>Course Code</th>
+                        <th>Course Title</th>
+                        <th>Lecturing_hours(L)</th>
+                        <th>Practicals_hours(P)</th>
+                        <th>Cummulative(CF)</th>
                     </tr>
                         
                 </thead>
                 <tbody id="myTable">
                     <%for(Courses c:courseses){ %>
                     <tr>
-                        <td><%= c.getCourseName()%></td>
-                        <td><%= c.getUnitCode() %></td>
+                        <td><%= c.getYear()%></td>
+                        <td><%= c.getSemester() %></td>
+                        <td><%= c.getCoursecode() %></td>
+                        <td><%= c.getCourse_title() %></td>
+                        <td><%= c.getLecturing_hours() %></td>
+                        <td><%= c.getPracticals_hours() %></td>
+                        <td><%= c.getCummulative() %></td>
                     </tr>
                     <%} %>
                 </tbody>

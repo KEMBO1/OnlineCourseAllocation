@@ -71,7 +71,7 @@
                             </li>
                             
                             <li class="nav-item ">
-                                <a class="nav-link" href="HodtaskAddCourse.jsp"  aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i></i>Add Course <span class="badge badge-success"></span></a>
+                                <a class="nav-link" href="ViewYearOfStudy"  aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i></i>Add Course <span class="badge badge-success"></span></a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="GetCourseDetails" aria-expanded="false" data-target="#submenu-2" aria-controls="submenu-2"><i></i>Allocate Courses </a>
@@ -92,6 +92,10 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="HodtaskAddYearOfStudy.jsp"  aria-expanded="false" data-target="#submenu-5" aria-controls="submenu-5"><i></i>Add Year Of Study</a>
+                             
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="viewcategory"  aria-expanded="false" data-target="#submenu-5" aria-controls="submenu-5"><i></i>View category</a>
                              
                             </li>
  

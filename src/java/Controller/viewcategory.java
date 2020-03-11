@@ -5,7 +5,7 @@
  */
 package Controller;
 
-import Kemboi.Courses;
+import Kemboi.Category;
 import database.controller.Retrive;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -22,8 +22,8 @@ import javax.servlet.http.HttpSession;
  *
  * @author Keboi
  */
-@WebServlet(name = "ViewCourses", urlPatterns = {"/ViewCourses"})
-public class ViewCourses extends HttpServlet {
+@WebServlet(name = "viewcategory", urlPatterns = {"/viewcategory"})
+public class viewcategory extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -36,16 +36,15 @@ public class ViewCourses extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        
         HttpSession session=request.getSession();
         
         Retrive retrive=new Retrive();
-        ArrayList<Courses> courseses=retrive.viewCourseses();
+        ArrayList<Category> categorys=retrive.viewCategorys();
         
+        session.setAttribute("viewcategorys", categorys);
         
-        session.setAttribute("courses",courseses);
-         
-        RequestDispatcher dispatcher=getServletContext().getRequestDispatcher("/VIEWALLCourses.jsp");
-        
+        RequestDispatcher dispatcher=getServletContext().getRequestDispatcher("/ViewUSERS.jsp");
         dispatcher.forward(request, response);
     }
 

@@ -80,7 +80,7 @@
                             </li>
                             
                             <li class="nav-item ">
-                                <a class="nav-link" href="HodtaskAddCourse.jsp"  aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i></i>Add Course<span class="badge badge-success"></span></a>
+                                <a class="nav-link" href="ViewYearOfStudy"  aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i></i>Add Course<span class="badge badge-success"></span></a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="GetCourseDetails"  aria-expanded="false" data-target="#submenu-2" aria-controls="submenu-2"><i></i>Allocate Courses </a>
@@ -129,26 +129,42 @@
             <!--<input type="number" name="lecturerID">-->
             <select name="lecturerID" class="form-control">
                 <% for(Lecturer lecturer:lecturers){ %>
+               
                    <option value="<%=lecturer.getLecturerID() %>">
                       <%= lecturer.getFirstName()+" "+lecturer.getSecondName() %>
                    </option>
+                   
                 <% }  %>
             </select><br><br>
             Courses:
             <!--<input type="text" name="courseID"><br>-->
-            
-            <select name="courseID"class="form-control">
+            <div class="" name="courseID">
+                <% for(Courses  courses:courseses){ %> 
+                <input type="checkbox" name="courseID" value="<%=courses.getCoursecode()%>">
+                <%= courses.getYear()+" "+courses.getSemester()+" "+courses.getCourse_title()+" "
+                     +courses.getLecturing_hours()+" "+courses.getPracticals_hours()+" "+
+                      courses.getCummulative()+"<br>" %>
+                      
+                 <% }  %>
+            </div>
+            <br><br><br>
+<!--            
+            <select name="courseID" class="form-control">
+               
                 <% for(Courses  courses:courseses){ %>
-                   <option value="<%=courses.getUnitCode()%>">
-                      <%= courses.getCourseName() %>
+                    
+                   <option value="<%=courses.getCoursecode()%> " >
+                       <%= courses.getYear()+" "+courses.getSemester()+"  "+courses.getCourse_title()+"  "+courses.getLecturing_hours()+"  "+courses.getPracticals_hours()+"  "+courses.getCummulative() %>
+                      
                    </option>
                 <% }  %>
-            </select><br><br>
+            </select><br><br>-->
             Departments:
-            <!--<input type="number" name="departmentID"><br>-->
+<!--            <input type="number" name="departmentID"><br>-->
             
             <select name="departmentID"class="form-control">
                 <% for(Department  department:departments){ %>
+                   
                    <option value="<%=department.getDepartmentID()%>">
                       <%= department.getDepartmentName()%>
                    </option>
@@ -159,6 +175,7 @@
             
             <select name="semesterID"class="form-control">
                 <% for(SemesterOfStudy semesterOfStudy:semesterOfStudys ){ %>
+                  
                    <option value="<%= semesterOfStudy.getSemesterID()%>">
                       <%= semesterOfStudy.getSemesterName()%>
                    </option>
@@ -170,6 +187,7 @@
             
             <select name="yearID"class="form-control">
                 <% for(YearOfStudy yearOfStudy:yearOfStudys ){ %>
+                   
                    <option value="<%= yearOfStudy.getYearID()%>">
                       <%= yearOfStudy.getYearName()%>
                    </option>
@@ -177,10 +195,10 @@
             </select><br><br>
             
             
-           Year_Generated:
-           <input type="text"class="form-control" value="<%= y.getYearName() %>" ><br>
+           Accademic Year:
+           <input disabled=""type=""class="form-control" value="<%= y.getYearName() %>" ><br>
            
-            <input type="Submit" value="ADD">
+            <input type="Submit" value="Allocate">
         </form
         </div>
 

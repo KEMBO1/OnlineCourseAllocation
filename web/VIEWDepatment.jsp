@@ -25,6 +25,24 @@
     <link rel="stylesheet" href="assets/vendor/fonts/flag-icon-css/flag-icon.min.css">
     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
     <title>Online Course Allocation</title>
+           <style>
+.table{
+  width: 100%;
+  margin-right: 20%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+</style>
 </head>
 
 <body>
@@ -123,18 +141,19 @@
         <table class="table table-sm table-bordered" id="myTable">
                 <thead>
                     <tr>
-                        <th>#</th>
-                        <th>DepartmentName</th>
                         <th>DepartmentID</th>
+                        <th>Department Name</th>
+                        
                     </tr>
                         
                 </thead>
                 <tbody id="myTable">
                     <%for(Department d:departments){ %>
                     <tr>
-                        <td></td>
-                        <td><%= d.getDepartmentName()%></td>
+                        
                         <td><%= d.getDepartmentID()%></td>
+                        <td><%= d.getDepartmentName()%></td>
+                        
                     </tr>
                     <%} %>
                 </tbody>

@@ -74,6 +74,9 @@ public class login extends HttpServlet {
             dispatcher.forward(request, response);
 //            PrintWriter out = response.getWriter();
 //            out.print("Yess");
+        }else{
+            RequestDispatcher dispatcher= getServletContext().getRequestDispatcher("/Login1.jsp");
+            dispatcher.forward(request, response);
         }
 
        
@@ -91,6 +94,9 @@ public class login extends HttpServlet {
             dispatcher.forward(request, response);
 //            PrintWriter out = response.getWriter();
 //            out.print("Yess");
+        }else{
+            RequestDispatcher dispatcher= getServletContext().getRequestDispatcher("/Login1.jsp");
+            dispatcher.forward(request, response);
         }    
 
   }  

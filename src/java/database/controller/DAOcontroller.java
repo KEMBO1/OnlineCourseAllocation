@@ -5,6 +5,7 @@
  */
 package database.controller;
 
+import Kemboi.Category;
 import Kemboi.CourseAllocation;
 import Kemboi.Courses;
 import Kemboi.Department;
@@ -17,6 +18,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.apache.tomcat.jni.User;
@@ -27,9 +30,10 @@ import org.apache.tomcat.jni.User;
  */
 public class DAOcontroller {
     public boolean addCourse(Courses course){
-        String query= "INSERT INTO `onlinecourse-allocation`.`courses` "
-                + "(`CourseName`, `UnitCode`) "
-                + "VALUES ('"+course.getCourseName()+"', '"+course.getUnitCode()+"')";
+        String query= "INSERT INTO `onlinecourse-allocation`.`course_stable` (`year`, `semester`, `course code`, `Course title`, `lecturing hours`, `practical hours`, `Cummulative`) VALUES ('"+course.getYear()+"',"
+                + " '"+course.getSemester()+"',"
+                + " '"+course.getCoursecode()+"',"
+                + " '"+course.getCourse_title()+"', '"+course.getLecturing_hours()+"', '"+course.getPracticals_hours()+"', '"+course.getCummulative()+"')";
         
         Database db = new Database();
         
@@ -38,6 +42,16 @@ public class DAOcontroller {
         return db.insertToDB(statemnt);
                
     }
+
+    public boolean addCategory(Category cate ){
+        String query="INSERT INTO `onlinecourse-allocation`.`category` (`categoryID`, `category`) VALUES ('"+cate.getCategory()+"', "
+                + "'"+cate.getCategoryID()+"')";
+        
+        Database db=new Database();
+        PreparedStatement statemnt=db.getPreparedStatement(query);
+        return db.insertToDB(statemnt);
+    }
+    
     public boolean addLecturer(Lecturer lec){
         String query="INSERT INTO `onlinecourse-allocation`.`lecturer`"
                 + " (`FirstName`, `SecondName`,`user_name`, `Category`, `Department`, "
@@ -123,7 +137,8 @@ public class DAOcontroller {
     ResultSet rs = null;
             Connection con = null;
             
-            String query = "select * from "+table+" where user_name = ?,Category = ?, and Password = ?";
+            
+            String query = "select * from "+table+" where user_name = ? and Category = ? and Password = ?";
             
             Database db=new Database();
             
@@ -142,9 +157,35 @@ public class DAOcontroller {
                 }else
                     return false;
             } catch (Exception e) {
+                System.out.println("error" + e.toString());
             }
       return true;
 
         
         }
-}
+        public List<YearOfStudy> get_years(){
+            PreparedStatement pst = null;
+            ResultSet rs = null;
+            Connection con = null;
+            List<YearOfStudy> model = new ArrayList<>();
+            String sql = "select * from `onlinecourse-allocation`.`year-of-study`";
+            
+            Database db=new Database();
+            
+           con = db.getConnection();
+           
+            try {
+                pst = con.prepareStatement(sql);
+                rs = pst.executeQuery();
+                
+                while (rs.next()) {
+                    YearOfStudy y = new YearOfStudy();
+                    y.setName(rs.getString("YearName"));
+                    model.add(y);
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            return  model;
+            }
+    }

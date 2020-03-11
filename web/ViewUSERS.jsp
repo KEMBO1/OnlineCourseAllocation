@@ -1,11 +1,11 @@
 <%-- 
-    Document   : ViewYearOfStudy
-    Created on : Feb 9, 2020, 9:21:37 AM
+    Document   : ViewUSERS
+    Created on : Mar 10, 2020, 2:03:08 PM
     Author     : Keboi
 --%>
 
-<%@page import="Kemboi.YearOfStudy"%>
 <%@page import="java.util.ArrayList"%>
+<%@page import="Kemboi.Category"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -35,22 +35,22 @@ th {
     </head>
     <body>
         <%    
-          ArrayList<YearOfStudy> yearOfStudys=(ArrayList<YearOfStudy>)session.getAttribute("yearOfStudy");
-          System.out.println(yearOfStudys.size());
+          ArrayList<Category> categorys=(ArrayList<Category>)session.getAttribute("viewcategorys");
+          System.out.println(categorys.size());
         %>
         <table <table class="table table-sm table-bordered" id="myTable">
                 <thead>
                     <tr>
-                        <th>YearID</th>
-                        <th>YearName</th>
+                        <th>CategoryID</th>
+                        <th>Category</th>
                     </tr>
                         
                 </thead>
                 <tbody id="myTable">
-                    <%for(YearOfStudy yearOfStudy:yearOfStudys){ %>
+                    <%for(Category category:categorys){ %>
                     <tr>
-                        <td><%= yearOfStudy.getYearID()%></td>
-                        <td><%= yearOfStudy.getYearName()%></td>
+                        <td><%= category.getCategoryID()%></td>
+                        <td><%= category.getCategory()%></td>
                     </tr>
                     <%} %>
                 </tbody>

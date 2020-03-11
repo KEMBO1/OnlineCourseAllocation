@@ -51,14 +51,23 @@ and open the template in the editor.
             </select><br><br>
             Courses:
             <!--<input type="text" name="courseID"><br>-->
-            
-            <select name="courseID">
+            <div>
                 <% for(Courses  courses:courseses){ %>
-                   <option value="<%=courses.getUnitCode()%>">
-                      <%= courses.getCourseName() %>
+                <input type="checkbox" name="courseID" value="<%=courses.getCoursecode()%>">good
+                <%= courses.getYear()+" "+courses.getSemester()+" "+courses.getCourse_title()+" "
+                     +courses.getLecturing_hours()+" "+courses.getPracticals_hours()+" "+
+                      courses.getCummulative() %>
+                 <% }  %>
+            </div>
+<!--            <select name="courseID">
+                <% for(Courses  courses:courseses){ %>
+                   <option value="<%=courses.getCoursecode()%>">
+                      <%= courses.getYear()+" "+courses.getSemester()+" "+courses.getCourse_title()+" "
+                     +courses.getLecturing_hours()+" "+courses.getPracticals_hours()+" "+
+                      courses.getCummulative() %>
                    </option>
                 <% }  %>
-            </select><br><br>
+            </select><br><br>-->
             Departments:
             <!--<input type="number" name="departmentID"><br>-->
             
@@ -95,7 +104,7 @@ and open the template in the editor.
            Year_Generated:
            <input type="text" value="<%= y.getYearName() %>" ><br>
            
-            <input type="Submit" value="ADD">
+            <input type="Submit" value="ALLOCATE">
         </form>
     </body>
 </html>

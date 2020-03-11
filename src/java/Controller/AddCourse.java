@@ -22,66 +22,45 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(name = "AddCourse", urlPatterns = {"/AddCourse"})
 public class AddCourse extends HttpServlet {
 
-    /**
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
-     * methods.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+ 
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        int year=Integer.parseInt(request.getParameter("year"));
+        int semester=Integer.parseInt(request.getParameter("semester"));
+        String Coursecode=request.getParameter("coursecode");
+        String course_title=request.getParameter("course_title");
+        int lecturing_hours=Integer.parseInt(request.getParameter("lecturing_hours"));
+        int practicals_hours=Integer.parseInt(request.getParameter("practicals_hours"));
+        float cummulative=Integer.parseInt(request.getParameter("cummulative"));
         
-        String CourseName=request.getParameter("course_name");
-        String UnitCode=request.getParameter("unit_code");
         
-            Courses  course= new Courses(CourseName,UnitCode);
+            Courses  course= new Courses(year,semester,Coursecode,course_title,lecturing_hours,practicals_hours,cummulative);
             
             DAOcontroller aOcontroller = new DAOcontroller();
             
             aOcontroller.addCourse(course);
-        
     }
 
-    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
-    /**
-     * Handles the HTTP <code>GET</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        processRequest(request, response);
-    }
-
-    /**
-     * Handles the HTTP <code>POST</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
+    
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        int year=Integer.parseInt(request.getParameter("year"));
+        int semester=Integer.parseInt(request.getParameter("semester"));
+        String Coursecode=request.getParameter("coursecode");
+        String course_title=request.getParameter("course_title");
+        int lecturing_hours=Integer.parseInt(request.getParameter("lecturing_hours"));
+        int practicals_hours=Integer.parseInt(request.getParameter("practicals_hours"));
+        float cummulative=Integer.parseInt(request.getParameter("cummulative"));
+        
+        
+            Courses  course= new Courses(year,semester,Coursecode,course_title,lecturing_hours,practicals_hours,cummulative);
+            
+            DAOcontroller aOcontroller = new DAOcontroller();
+            
+            aOcontroller.addCourse(course);
     }
 
-    /**
-     * Returns a short description of the servlet.
-     *
-     * @return a String containing servlet description
-     */
-    @Override
-    public String getServletInfo() {
-        return "Short description";
-    }// </editor-fold>
-
+   
 }

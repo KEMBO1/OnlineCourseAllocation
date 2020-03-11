@@ -5,6 +5,7 @@
  */
 package Controller;
 
+import Kemboi.SemesterOfStudy;
 import Kemboi.YearOfStudy;
 import database.controller.Retrive;
 import java.io.IOException;
@@ -40,10 +41,12 @@ public class ViewYearOfStudy extends HttpServlet {
         
         Retrive retrive= new Retrive();
         ArrayList<YearOfStudy>yearOfStudys=retrive.viewOfStudys();
+        ArrayList<SemesterOfStudy>semesterOfStudys=retrive.viewSemesterOfStudys();
         
         session.setAttribute("yearOfStudy", yearOfStudys);
+        session.setAttribute("semesterOfStudys", semesterOfStudys);
         
-        RequestDispatcher dispatcher=getServletContext().getRequestDispatcher("/Yearofstudy.jsp");
+        RequestDispatcher dispatcher=getServletContext().getRequestDispatcher("/HodtaskAddCourse.jsp");
         
         dispatcher.forward(request, response);
     }

@@ -49,7 +49,7 @@ public class viewAllocations extends HttpServlet {
         out.print(courseAllocations);
         session.setAttribute("Alloctions", courseAllocations);
         
-        RequestDispatcher dispatcher= getServletContext().getRequestDispatcher("/Allocations.jsp");
+        RequestDispatcher dispatcher= getServletContext().getRequestDispatcher("/LECTURERVIEWAllocatedunits.jsp");
         
         dispatcher.forward(request, response);
     }

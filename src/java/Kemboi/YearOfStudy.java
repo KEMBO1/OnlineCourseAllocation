@@ -5,15 +5,19 @@
  */
 package Kemboi;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  *
  * @author Keboi
  */
-public class YearOfStudy {
-    private int YearID;
-    private String YearName;
+public class YearOfStudy implements Serializable{
+     int YearID;
+     String YearName;
+
+    public YearOfStudy() {
+    }
 
     public YearOfStudy(int YearID, String YearName) {
         this.YearID = YearID;

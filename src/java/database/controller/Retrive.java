@@ -5,6 +5,7 @@
  */
 package database.controller;
 
+import Kemboi.Category;
 import Kemboi.CourseAllocation;
 import Kemboi.Courses;
 import Kemboi.Department;
@@ -55,15 +56,16 @@ public class Retrive {
               ArrayList<Courses> courseses= new ArrayList<>();
               
               try {
-           String query="SELECT * FROM `courses`";
+           String query="SELECT * FROM `course_stable`";
            
            Database db=new Database();
            PreparedStatement statemnt=db.getPreparedStatement(query);
            
            ResultSet resultSet=db.retrieveInfo(statemnt);
            while(resultSet.next()){
-               Courses courses=new Courses(resultSet.getString(1), resultSet.getString(2));
+               Courses courses=new Courses(resultSet.getInt(1),resultSet.getInt(2),resultSet.getString(3),resultSet.getString(4),resultSet.getInt(5),resultSet.getInt(6),resultSet.getFloat(7));
                courseses.add(courses);
+//               public Courses(int year, int semester, String coursecode, String course_title, int lecturing_hours, int practicals_hours, float cummulative)
            }
               }catch(SQLException ex){
                   Logger.getLogger(Retrive.class.getName()).log(Level.SEVERE,null,ex);
@@ -111,6 +113,25 @@ public class Retrive {
            Logger.getLogger(Retrive.class.getName()).log(Level.SEVERE,null,ex);
        }
        return lecturers;
+   }
+   public ArrayList<Category> viewCategorys(){
+   ArrayList<Category> categorys = new ArrayList<>();
+   
+       try {
+           String query = "SELECT * FROM `category`";
+           Database db=new Database();
+           PreparedStatement statemnt=db.getPreparedStatement(query);
+           
+           ResultSet resultSet = db.retrieveInfo(statemnt);
+           
+           while(resultSet.next()){
+           Category category=new Category(resultSet.getInt(1), resultSet.getString(2));
+           categorys.add(category);
+           }
+       } catch (SQLException ex) {
+           Logger.getLogger(Retrive.class.getName()).log(Level.SEVERE, null,ex);
+       }
+       return categorys;
    }
    public ArrayList<SemesterOfStudy> viewSemesterOfStudys(){
        ArrayList<SemesterOfStudy> semesterOfStudys = new ArrayList<>();
