@@ -9,6 +9,7 @@ import Kemboi.Courses;
 import database.controller.DAOcontroller;
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -60,7 +61,18 @@ public class AddCourse extends HttpServlet {
             DAOcontroller aOcontroller = new DAOcontroller();
             
             aOcontroller.addCourse(course);
+            
+      RequestDispatcher dispatcher=getServletContext().getRequestDispatcher("/Hodtasks.jsp");
+        
+        dispatcher.forward(request, response); 
+        
+        
+            
     }
+    
+    
+        
+    
 
-   
-}
+} 
+

@@ -10,13 +10,19 @@ package Kemboi;
  * @author Keboi
  */
 public class Department {
+    
     private String DepartmentName;
     private int DepartmentID;
 
-    public Department(String DepartmentName, int DepartmentID) {
+    public Department( String DepartmentName, int DepartmentID) {
+        
         this.DepartmentName = DepartmentName;
         this.DepartmentID = DepartmentID;
     }
+
+    
+
+    
 
     public String getDepartmentName() {
         return DepartmentName;
@@ -33,6 +39,8 @@ public class Department {
     public void setDepartmentID(int DepartmentID) {
         this.DepartmentID = DepartmentID;
     }
+
+    
     
     
     

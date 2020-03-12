@@ -141,6 +141,7 @@ th {
         <table class="table table-sm table-bordered" id="myTable">
                 <thead>
                     <tr>
+                       
                         <th>DepartmentID</th>
                         <th>Department Name</th>
                         
