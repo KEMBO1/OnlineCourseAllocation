@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="assets/vendor/fonts/material-design-iconic-font/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="assets/vendor/charts/c3charts/c3.css">
     <link rel="stylesheet" href="assets/vendor/fonts/flag-icon-css/flag-icon.min.css">
+    
     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
     <title>Online Course Allocation</title>
 </head>
@@ -137,7 +138,42 @@
                 <% }  %>
             </select><br><br>
             Courses:
-            <!--<input type="text" name="courseID"><br>-->
+            <div class="" name="courseID" >
+            <table class="table table-sm table-bordered" id="myTable">
+                <thead>
+                    <tr>
+                        <th>Select </th>
+                        <th>Year of Study</th>
+                        <th>Semester of Study</th>
+                        <th>Course Code</th>
+                        <th>Course Title</th>
+                        <th>Lecturing_hours(L)</th>
+                        <th>Practicals_hours(P)</th>
+                        <th>Cummulative(CF)</th>
+                    </tr>
+                        
+                </thead>
+                <tbody id="myTable">
+                    <tbody id="myTable">
+                    <% for(Courses  c:courseses){ %>
+                    <tr>
+                        <td ><input type="checkbox"></td>
+                        <td><%= c.getYear()%></td>
+                        <td><%= c.getSemester() %></td>
+                        <td><%= c.getCoursecode() %></td>
+                        <td><%= c.getCourse_title() %></td>
+                        <td><%= c.getLecturing_hours() %></td>
+                        <td><%= c.getPracticals_hours() %></td>
+                        <td><%= c.getCummulative() %></td>
+                    </tr>
+                    <%} %>
+                    
+                </tbody>
+                
+            </table>
+            </div>
+           
+<!--            <input type="text" name="courseID"><br>
             <div class="form-control" name="courseID">
                 <% for(Courses  courses:courseses){ %> 
                 <input type="checkbox" name="courseID" value="<%=courses.getCoursecode()%>">
@@ -147,20 +183,10 @@
                       
                  <% }  %>
             </div>
-            <br><br><br>
-<!--            
-            <select name="courseID" class="form-control">
-               
-                <% for(Courses  courses:courseses){ %>
-                    
-                   <option value="<%=courses.getCoursecode()%> " >
-                       <%= courses.getYear()+" "+courses.getSemester()+"  "+courses.getCourse_title()+"  "+courses.getLecturing_hours()+"  "+courses.getPracticals_hours()+"  "+courses.getCummulative() %>
-                      
-                   </option>
-                <% }  %>
-            </select><br><br>-->
+            <br><br><br>-->
+
             Departments:
-<!--            <input type="number" name="departmentID"><br>-->
+
             
             <select name="departmentID"class="form-control">
                 <% for(Department  department:departments){ %>
@@ -170,7 +196,7 @@
                    </option>
                 <% }  %>
             </select><br><br>
-            Semester:
+            Semesters of Study:
             <!--<input type="number" name="semesterID" min="1" max="3"><br>!-->
             
             <select name="semesterID"class="form-control">
@@ -182,7 +208,7 @@
                 <% }  %>
             </select><br><br>
             
-            Year:
+            Year of Study:
             <!--<input type="number" name="yearID"><br>!-->
             
             <select name="yearID"class="form-control">

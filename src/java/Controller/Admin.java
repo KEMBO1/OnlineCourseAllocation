@@ -5,12 +5,12 @@
  */
 package Controller;
 
-import Kemboi.Department;
-import database.controller.Retrive;
+import database.AdminDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
-import javax.servlet.RequestDispatcher;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -22,8 +22,8 @@ import javax.servlet.http.HttpSession;
  *
  * @author Keboi
  */
-@WebServlet(name = "ViewDepartment", urlPatterns = {"/ViewDepartment"})
-public class ViewDepartment extends HttpServlet {
+@WebServlet(name = "Admin", urlPatterns = {"/Admin"})
+public class Admin extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -36,16 +36,31 @@ public class ViewDepartment extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        HttpSession session=request.getSession();
+        try {
+            String Username=request.getParameter("username");
+            String Password=request.getParameter("password");
+            
+            AdminDAO dao=new AdminDAO();
+            
+            if (dao.check(Username, Password)) {
+                
+             HttpSession session = request.getSession();
+            session.setAttribute("username", Username); 
+            
+              response.sendRedirect("AdminDashboard.jsp");  
+            }else{
+            request.setAttribute("message", "Enter correct Username and Password");
+            response.sendRedirect("Adminlogin.jsp");
+            
+            }
+            
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
         
-        Retrive retrive=new Retrive();
-        ArrayList<Department> departments=retrive.viewdepartment();
         
-        session.setAttribute("department", departments);
         
-        RequestDispatcher dispatcher=getServletContext().getRequestDispatcher("/AdmintaskViewDepartments.jsp");
         
-        dispatcher.forward(request, response);
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

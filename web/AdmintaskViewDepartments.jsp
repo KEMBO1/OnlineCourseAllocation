@@ -3,13 +3,17 @@
     Created on : Feb 26, 2020, 12:35:52 PM
     Author     : Keboi
 --%>
+<%@page import="Kemboi.Department"%>
+<%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!doctype html>
 <html lang="en">
  
 <head>
-    
+    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
     <link href="assets/vendor/fonts/circular-std/style.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/libs/css/style.css">
@@ -21,13 +25,37 @@
     <link rel="stylesheet" href="assets/vendor/fonts/flag-icon-css/flag-icon.min.css">
     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
     <title>Online Course Allocation</title>
+           <style>
+.table{
+  width: 100%;
+  margin-right: 20%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+</style>
 </head>
 
 <body>
+    <!-- ============================================================== -->
+    <!-- main wrapper -->
+    <!-- ============================================================== -->
     <div class="dashboard-main-wrapper">
+        <!-- ============================================================== -->
+        <!-- navbar -->
+        <!-- ============================================================== -->
         <div class="dashboard-header">
             <nav class="navbar navbar-expand-lg bg-white fixed-top">
-                <a class="navbar-brand" href="">Online Course allocation</a>
+                <a class="navbar-brand" href="AdminDashboard.jsp">Online Course allocation</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -52,6 +80,12 @@
                 </div>
             </nav>
         </div>
+        <!-- ============================================================== -->
+        <!-- end navbar -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- left sidebar -->
+        <!-- ============================================================== -->
         <div class="nav-left-sidebar sidebar-dark">
             <div class="menu-list">
                 <nav class="navbar navbar-expand-lg navbar-light">
@@ -63,62 +97,73 @@
                         <ul class="navbar-nav flex-column">
                             <li class="nav-divider">
                                 Menu
-                            </li>
+                             </li>
                             
                             <li class="nav-item ">
-                                <a class="nav-link" href="ViewYearOfStudy"  aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i></i>Add Course<span class="badge badge-success"></span></a>
+                                <a class="nav-link" href="ViewYearOfStudy"  aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i></i>Add Unit in the System <span class="badge badge-success"></span></a>
                             </li>
+                       
                             <li class="nav-item">
-                                <a class="nav-link" href="GetCourseDetails"  aria-expanded="false" data-target="#submenu-2" aria-controls="submenu-2"><i></i>Allocate Courses </a>
-                              
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="HodtaskAddDepartment.jsp"  aria-expanded="false" data-target="#submenu-3" aria-controls="submenu-3"><i></i>Add Department</a>
+                                <a class="nav-link" href="AdmintaskAddDepartment.jsp"  aria-expanded="false" data-target="#submenu-3" aria-controls="submenu-3"><i></i>Add Departments to the System</a>
                   
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link" href="HodtaskAddLecturer.jsp"  aria-expanded="false" data-target="#submenu-4" aria-controls="submenu-4"><i></i>Register Lecturer </a>
+                                <a class="nav-link" href="AdmintaskRegesterHOD.jsp"  aria-expanded="false" data-target="#submenu-4" aria-controls="submenu-4"><i></i>Register HODs</a>
+                           
                             </li>
-<!--                            <li class="nav-item">
-                                <a class="nav-link" href="HodtaskAddSemesterOfStudy.jsp" aria-expanded="false" data-target="#submenu-5" aria-controls="submenu-5"><i></i>Add Semester Of Study</a>
-                                
-                            </li>
+                      
+                   
                             <li class="nav-item">
-                                <a class="nav-link" href="HodtaskAddYearOfStudy.jsp"  aria-expanded="false" data-target="#submenu-5" aria-controls="submenu-5"><i></i>Add Year Of Study</a>
-                             
-                            </li>-->
+                                <a class="nav-link" href="ViewDepartment"  aria-expanded="false" data-target="#submenu-3" aria-controls="submenu-3"><i></i>View Departments</a>
+                  
+                            </li>
                         </ul>
                     </div>
                 </nav>
             </div>
         </div>
+        <!-- ============================================================== -->
+        <!-- end left sidebar -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- wrapper  -->
+        <!-- ============================================================== -->
         <div class="dashboard-wrapper">
             <div class="dashboard-ecommerce">
                 <div class="container-fluid dashboard-content ">
-                   
-<div class="container">
-<!--    <form action="AddDepartment" method="post">-->
-  <form class="form-horizontal" action="AddDepartment" method="post">
-    <div class="form-group">
-      <label class="control-label col-sm-2" for="department_name"> DepartmentName </label>
-      <div class="col-sm-10">
-          <input type="text" class="form-control" id="department_name" required="required" placeholder="Enter department_name" name="department_name"><br>
-      </div>
-    </div>
-    <div class="form-group">
-      <label class="control-label col-sm-2" for="departmentID">DepartmentID:</label>
-      <div class="col-sm-10">          
-      <input type="number" class="form-control" id="departmentID" required="required"placeholder="Enter departmentID" name="departmentID"><br>
-  </div>
-</div>
-    <div class="form-group">        
-      <div class="col-sm-offset-2 col-sm-10">
-        <button type="submit" class="btn btn-default">Submit</button>
-      </div>
-    </div>
-  </form>
-</div>
-                    <script src="assets/vendor/jquery/jquery-3.3.1.min.js"></script>
+                    <!-- ============================================================== -->
+                    <!-- pageheader  -->
+                    <!-- ============================================================== -->
+ <%    
+          ArrayList<Department> departments=(ArrayList<Department>)session.getAttribute("department");
+          System.out.println(departments.size());
+        %>
+        <table class="table table-sm table-bordered" id="myTable">
+                <thead>
+                    <tr>
+                       
+                        <th>DepartmentID</th>
+                        <th>Department Name</th>
+                        
+                    </tr>
+                        
+                </thead>
+                <tbody id="myTable">
+                    <%for(Department d:departments){ %>
+                    <tr>
+                        
+                        <td><%= d.getDepartmentID()%></td>
+                        <td><%= d.getDepartmentName()%></td>
+                        
+                    </tr>
+                    <%} %>
+                </tbody>
+            </table>
+                    <!-- ============================================================== -->
+                    <!-- end pageheader  -->
+                    <!-- ============================================================== -->
+
+    <script src="assets/vendor/jquery/jquery-3.3.1.min.js"></script>
     <!-- bootstap bundle js -->
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
     <!-- slimscroll js -->

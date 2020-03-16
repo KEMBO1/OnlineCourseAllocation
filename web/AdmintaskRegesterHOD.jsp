@@ -3,13 +3,17 @@
     Created on : Feb 26, 2020, 12:35:52 PM
     Author     : Keboi
 --%>
+<%--<%@page import="java.util.ArrayList"%>
+<%@page import="Kemboi.Courses"%>--%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!doctype html>
 <html lang="en">
  
 <head>
-    
+    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
     <link href="assets/vendor/fonts/circular-std/style.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/libs/css/style.css">
@@ -27,7 +31,7 @@
     <div class="dashboard-main-wrapper">
         <div class="dashboard-header">
             <nav class="navbar navbar-expand-lg bg-white fixed-top">
-                <a class="navbar-brand" href="">Online Course allocation</a>
+                <a class="navbar-brand" href="AdminDashboard.jsp">Online Course allocation</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -66,27 +70,24 @@
                             </li>
                             
                             <li class="nav-item ">
-                                <a class="nav-link" href="ViewYearOfStudy"  aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i></i>Add Course<span class="badge badge-success"></span></a>
+                                <a class="nav-link" href="ViewYearOfStudy"  aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i></i>Add Unit in the System <span class="badge badge-success"></span></a>
                             </li>
+                       
                             <li class="nav-item">
-                                <a class="nav-link" href="GetCourseDetails"  aria-expanded="false" data-target="#submenu-2" aria-controls="submenu-2"><i></i>Allocate Courses </a>
-                              
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="HodtaskAddDepartment.jsp"  aria-expanded="false" data-target="#submenu-3" aria-controls="submenu-3"><i></i>Add Department</a>
+                                <a class="nav-link" href="AdmintaskAddDepartment.jsp"  aria-expanded="false" data-target="#submenu-3" aria-controls="submenu-3"><i></i>Add Departments to the System</a>
                   
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link" href="HodtaskAddLecturer.jsp"  aria-expanded="false" data-target="#submenu-4" aria-controls="submenu-4"><i></i>Register Lecturer </a>
+                                <a class="nav-link" href="AdmintaskRegesterHOD.jsp"  aria-expanded="false" data-target="#submenu-4" aria-controls="submenu-4"><i></i>Register HODs</a>
+                           
                             </li>
-<!--                            <li class="nav-item">
-                                <a class="nav-link" href="HodtaskAddSemesterOfStudy.jsp" aria-expanded="false" data-target="#submenu-5" aria-controls="submenu-5"><i></i>Add Semester Of Study</a>
-                                
-                            </li>
+                      
+                   
                             <li class="nav-item">
-                                <a class="nav-link" href="HodtaskAddYearOfStudy.jsp"  aria-expanded="false" data-target="#submenu-5" aria-controls="submenu-5"><i></i>Add Year Of Study</a>
-                             
-                            </li>-->
+                                <a class="nav-link" href="ViewDepartment"  aria-expanded="false" data-target="#submenu-3" aria-controls="submenu-3"><i></i>View Department</a>
+                  
+                            </li>
+                            
                         </ul>
                     </div>
                 </nav>
@@ -97,26 +98,65 @@
                 <div class="container-fluid dashboard-content ">
                    
 <div class="container">
-<!--    <form action="AddDepartment" method="post">-->
-  <form class="form-horizontal" action="AddDepartment" method="post">
+  <form class="form-horizontal" action="Addlecturer" method="post">
     <div class="form-group">
-      <label class="control-label col-sm-2" for="department_name"> DepartmentName </label>
+      <label class="control-label col-sm-2" for="first_name">FirstName:</label>
       <div class="col-sm-10">
-          <input type="text" class="form-control" id="department_name" required="required" placeholder="Enter department_name" name="department_name"><br>
+          <input type="text" class="form-control" id="first_name" required="required" placeholder="Enter firstname" name="first_name"><br>
       </div>
     </div>
     <div class="form-group">
-      <label class="control-label col-sm-2" for="departmentID">DepartmentID:</label>
+      <label class="control-label col-sm-2" for="second_name">SecondName:</label>
       <div class="col-sm-10">          
-      <input type="number" class="form-control" id="departmentID" required="required"placeholder="Enter departmentID" name="departmentID"><br>
-  </div>
-</div>
+          <input type="text" class="form-control" id="second_name" required="required" placeholder="Enter secondname" name="second_name"><br>
+      </div>
+    </div>
+      <div class="form-group">
+      <label class="control-label col-sm-2" for="second_name">Username</label>
+      <div class="col-sm-10">          
+          <input type="text" class="form-control" id="second_name" required="required" placeholder="" name="username"><br>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="category">Category:</label>
+      <div class="col-sm-10">          
+        <select class="form-control" id="category" required="required" placeholder="Select category" name="category"><br>
+        <option>   </option>
+        <option>Hod</option>
+      	<option>Lecturer</option>
+      </select><br>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="department">Department:</label>
+      <div class="col-sm-10">          
+        <input type="text>" class="form-control" id="department" required="required" placeholder="Enter department"name="department"><br>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="salutation">Salutation:</label>
+      <div class="col-sm-10"> 
+      <select class="form-control" id="salutation" required="required"placeholder="Select salutation" name="salutation">
+          <option>   </option>
+         <option>Mr</option>
+      	<option>Mrs</option>
+      	<option>Miss</option>
+      </select><br>
+    </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="password">Password:</label>
+      <div class="col-sm-10">          
+        <input type="password" class="form-control" id="password" required="required" placeholder="Enter Password"name="password"><br>
+      </div>
+    </div>
     <div class="form-group">        
       <div class="col-sm-offset-2 col-sm-10">
         <button type="submit" class="btn btn-default">Submit</button>
       </div>
     </div>
   </form>
+    
 </div>
                     <script src="assets/vendor/jquery/jquery-3.3.1.min.js"></script>
     <!-- bootstap bundle js -->

@@ -49,7 +49,7 @@
                                 </c:forEach>
                                 <a class="dropdown-item" href="#"><i class="fas fa-user mr-2"></i>Account</a>
                                 <a class="dropdown-item" href="#"><i class="fas fa-cog mr-2"></i>Setting</a>
-                                <a class="dropdown-item" href="index.jsp"><i class="fas fa-power-off mr-2"></i>Logout</a>
+                                <a class="dropdown-item" href="Adminlogin.jsp"><i class="fas fa-power-off mr-2"></i>Logout</a>
                             </div>
                         </li>
                     </ul>
@@ -71,23 +71,22 @@
                             </li>
                             
                             <li class="nav-item ">
-                                <a class="nav-link" href="viewAllocations"  aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i></i>View Allocations <span class="badge badge-success"></span></a>
+                                <a class="nav-link" href="ViewYearOfStudy"  aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i></i>Add Unit in the System <span class="badge badge-success"></span></a>
                             </li>
+                       
                             <li class="nav-item">
-                                <a class="nav-link" href="ViewCourses" aria-expanded="false" data-target="#submenu-2" aria-controls="submenu-2"><i></i>View Courses</a>
-                              
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="ViewDepartment"  aria-expanded="false" data-target="#submenu-3" aria-controls="submenu-3"><i></i>View Department</a>
+                                <a class="nav-link" href="AdmintaskAddDepartment.jsp"  aria-expanded="false" data-target="#submenu-3" aria-controls="submenu-3"><i></i>Add Departments to the System</a>
                   
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link" href="ViewSemesterOfStudy"  aria-expanded="false" data-target="#submenu-4" aria-controls="submenu-4"><i></i>View Semester Of Study</a>
+                                <a class="nav-link" href="AdmintaskRegesterHOD.jsp"  aria-expanded="false" data-target="#submenu-4" aria-controls="submenu-4"><i></i>Register HODs</a>
                            
                             </li>
+                      
+                   
                             <li class="nav-item">
-                                <a class="nav-link" href="ViewYearOfStudy"  aria-expanded="false" data-target="#submenu-5" aria-controls="submenu-5"><i></i>View Year Of Study</a>
-                             
+                                <a class="nav-link" href="ViewDepartment"  aria-expanded="false" data-target="#submenu-3" aria-controls="submenu-3"><i></i>View Department</a>
+                  
                             </li>
                             
                             

@@ -27,7 +27,7 @@
     <div class="dashboard-main-wrapper">
         <div class="dashboard-header">
             <nav class="navbar navbar-expand-lg bg-white fixed-top">
-                <a class="navbar-brand" href="">Online Course allocation</a>
+                <a class="navbar-brand" href="AdminDashboard.jsp">Online Course allocation</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -63,30 +63,27 @@
                         <ul class="navbar-nav flex-column">
                             <li class="nav-divider">
                                 Menu
-                            </li>
+                             </li>
                             
                             <li class="nav-item ">
-                                <a class="nav-link" href="ViewYearOfStudy"  aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i></i>Add Course<span class="badge badge-success"></span></a>
+                                <a class="nav-link" href="ViewYearOfStudy"  aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i></i>Add Unit in the System <span class="badge badge-success"></span></a>
                             </li>
+                       
                             <li class="nav-item">
-                                <a class="nav-link" href="GetCourseDetails"  aria-expanded="false" data-target="#submenu-2" aria-controls="submenu-2"><i></i>Allocate Courses </a>
-                              
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="HodtaskAddDepartment.jsp"  aria-expanded="false" data-target="#submenu-3" aria-controls="submenu-3"><i></i>Add Department</a>
+                                <a class="nav-link" href="AdmintaskAddDepartment.jsp"  aria-expanded="false" data-target="#submenu-3" aria-controls="submenu-3"><i></i>Add Departments to the System</a>
                   
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link" href="HodtaskAddLecturer.jsp"  aria-expanded="false" data-target="#submenu-4" aria-controls="submenu-4"><i></i>Register Lecturer </a>
+                                <a class="nav-link" href="AdmintaskRegesterHOD.jsp"  aria-expanded="false" data-target="#submenu-4" aria-controls="submenu-4"><i></i>Register HODs</a>
+                           
                             </li>
-<!--                            <li class="nav-item">
-                                <a class="nav-link" href="HodtaskAddSemesterOfStudy.jsp" aria-expanded="false" data-target="#submenu-5" aria-controls="submenu-5"><i></i>Add Semester Of Study</a>
-                                
-                            </li>
+                      
+                   
                             <li class="nav-item">
-                                <a class="nav-link" href="HodtaskAddYearOfStudy.jsp"  aria-expanded="false" data-target="#submenu-5" aria-controls="submenu-5"><i></i>Add Year Of Study</a>
-                             
-                            </li>-->
+                                <a class="nav-link" href="ViewDepartment"  aria-expanded="false" data-target="#submenu-3" aria-controls="submenu-3"><i></i>View Department</a>
+                  
+                            </li>
+                            
                         </ul>
                     </div>
                 </nav>

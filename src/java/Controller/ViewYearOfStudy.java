@@ -46,7 +46,7 @@ public class ViewYearOfStudy extends HttpServlet {
         session.setAttribute("yearOfStudy", yearOfStudys);
         session.setAttribute("semesterOfStudys", semesterOfStudys);
         
-        RequestDispatcher dispatcher=getServletContext().getRequestDispatcher("/HodtaskAddCourse.jsp");
+        RequestDispatcher dispatcher=getServletContext().getRequestDispatcher("/AdmintaskAddUnit.jsp");
         
         dispatcher.forward(request, response);
     }
